@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.developer.appname.android"
+    android:versionCode="3"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+	<permission android:protectionLevel="signature"
+    	android:name="com.developer.appname.android.permission.C2D_MESSAGE" />
+	<uses-permission android:name="com.developer.appname.android.permission.C2D_MESSAGE" />
+    
+	<uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name="com.developer.appname.android.MainApplicationStartup"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/Theme.Customactionbar" >
+        <activity
+            android:name="com.developer.appname.android.MainActivity"
+            android:label="@string/app_name"
+            android:logo="@drawable/ic_action"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.developer.appname.android.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:logo="@drawable/ic_action"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.developer.appname.android.PasswordResetActivity"
+            android:label="@string/title_activity_password_reset"
+            android:logo="@drawable/ic_action"
+            android:parentActivityName="com.developer.appname.android.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.developer.appname.android.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:logo="@drawable/ic_action"
+            android:parentActivityName="com.developer.appname.android.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.developer.appname.android.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:logo="@drawable/ic_action"
+            android:parentActivityName="com.developer.appname.android.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.developer.appname.android.EditUsernameActivity"
+            android:label="@string/title_activity_edit_username"
+            android:logo="@drawable/ic_action"
+            android:parentActivityName="com.developer.appname.android.SettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.developer.appname.android.EditEmailActivity"
+            android:label="@string/title_activity_edit_email"
+            android:logo="@drawable/ic_action"
+            android:parentActivityName="com.developer.appname.android.SettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.developer.appname.android.ProfileViewActivity"
+            android:logo="@drawable/ic_action"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.developer.appname.android.WebViewActivity"
+            android:logo="@drawable/ic_action"
+            android:parentActivityName="com.developer.appname.android.SettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.developer.appname.android.EditFriendsActivity"
+            android:label="@string/title_activity_edit_friends"
+            android:logo="@drawable/ic_action"
+            android:parentActivityName="com.developer.appname.android.MainActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="com.developer.appname.android.RecipientsActivity"
+            android:label="@string/title_activity_recipients"
+            android:logo="@drawable/ic_action"
+            android:parentActivityName="com.developer.appname.android.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.developer.appname.android.ViewImageActivity"
+            android:parentActivityName="com.developer.appname.android.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.developer.appname.android.ViewVideoActivity"
+            android:parentActivityName="com.developer.appname.android.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <service android:name="com.parse.PushService" />
+		<receiver android:name="com.parse.ParseBroadcastReceiver">
+  			<intent-filter>
+    			<action android:name="android.intent.action.BOOT_COMPLETED" />
+    			<action android:name="android.intent.action.USER_PRESENT" />
+  			</intent-filter>
+		</receiver>
+		<receiver android:name="com.developer.appname.android.MyCustomReceiver" android:exported="false">
+  			<intent-filter>
+    			<action android:name="com.developer.appname.android.UPDATE_MESSAGES" />
+    			<action android:name="com.developer.appname.android.UPDATE_REQUESTS" />
+    		</intent-filter>
+		</receiver>
+		<receiver android:name="com.parse.GcmBroadcastReceiver"
+    		android:permission="com.google.android.c2dm.permission.SEND">
+  		<intent-filter>
+    	  <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+    	  <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+			
+		    <category android:name="com.developer.appname.android" />
+  		  </intent-filter>
+		</receiver>
+
+    </application>
+</manifest>

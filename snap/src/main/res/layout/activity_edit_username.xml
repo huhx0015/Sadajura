@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditUsernameActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+            
+    <EditText
+        android:id="@+id/usernameField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+    	android:lines="1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:ems="10"
+        android:hint="@string/username_hint"
+        android:inputType="textVisiblePassword"
+        android:minHeight="@dimen/text_view_vertical_height"
+        android:background="@drawable/edittext" />
+    
+    <TextView
+        android:id="@+id/enterUsernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_below="@+id/usernameField"
+        android:text="Please enter a new username to be associated with your YourAppName account."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <Button
+		android:id="@+id/savebtn"
+	    android:layout_width="fill_parent"
+	    android:layout_height="52dp"
+	    android:layout_below="@+id/enterUsernameTextView"
+	    android:layout_marginTop="10dp"
+	    android:gravity="center"
+		android:text="Save"
+		android:textColor="#000000"
+		android:textSize="21sp"
+		android:background="@drawable/loginbtn" />
+    
+	</RelativeLayout>
+</ScrollView>

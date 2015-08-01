@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    
+    <item android:id="@+id/action_edit_friends" android:orderInCategory = "0" android:icon="@drawable/ic_add_friend" android:title="@string/menu_camera_label" android:showAsAction="always"></item>
+	<item android:id="@+id/action_logout" android:orderInCategory = "9999" android:title="@string/menu_logout_label"></item>
+    <item android:id="@+id/action_camera" android:orderInCategory = "1" android:icon="@drawable/ic_action_camera" android:title="@string/menu_camera_label" android:showAsAction="always"></item>
+    <item android:id="@+id/action_settings" android:orderInCategory = "3" android:title="@string/menu_settings_label"></item>
+    
+</menu>

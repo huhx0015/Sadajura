@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/action_remove" android:orderInCategory="100" android:showAsAction="always" android:title="@string/menu_remove_label" android:visible="false"/>
+    <item android:id="@+id/action_add" android:orderInCategory="100" android:showAsAction="always" android:title="@string/menu_add_label" android:visible="false"/>
+
+</menu>
+<!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Projects/Sadajura/snap/src/main/res/menu/friends_profile.xml -->

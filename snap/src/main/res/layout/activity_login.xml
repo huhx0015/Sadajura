@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    tools:context=".LoginActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+            
+    <EditText
+        android:id="@+id/usernameField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+    	android:lines="1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:ems="10"
+        android:hint="@string/username_hint"
+        android:inputType="textVisiblePassword" 
+        android:minHeight="@dimen/text_view_vertical_height"
+        android:background="@drawable/edittext" />
+
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:lines="1"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/usernameField"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:ems="10"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:minHeight="@dimen/text_view_vertical_height"
+        android:background="@drawable/edittext" />
+
+    <Button
+		android:id="@+id/loginbtn"
+	    android:layout_width="fill_parent"
+	    android:layout_height="52dp"
+	    android:layout_below="@+id/passwordField"
+	    android:layout_marginTop="50dp"
+	    android:gravity="center"
+		android:text="Log In"
+		android:textColor="#000000"
+		android:textSize="21sp"
+		android:background="@drawable/loginbtn" />
+    
+     <Button
+		android:id="@+id/signupbtn"
+	    android:layout_width="fill_parent"
+	    android:layout_height="52dp"
+	    android:layout_below="@+id/loginbtn"
+	    android:gravity="center"
+		android:text="Sign Up"
+		android:textColor="#000000"
+		android:textSize="21sp"
+		android:background="@drawable/signupbtn" />
+
+    <TextView
+        android:id="@+id/resetTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signupbtn"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/reset_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+    
+	</RelativeLayout>
+</ScrollView>
