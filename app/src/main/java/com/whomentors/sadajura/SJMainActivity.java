@@ -14,6 +14,8 @@ public class SJMainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setUpLayout();
     }
 
     @Override
@@ -39,6 +41,11 @@ public class SJMainActivity extends FragmentActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+
+    private void setUpLayout() {
+        setContentView(R.layout.main_activity); // Sets the XML layout file for the activity.
     }
 
 }
