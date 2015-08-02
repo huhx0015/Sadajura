@@ -150,7 +150,9 @@ public class MainActivity extends FragmentActivity implements
 				});
 
 		// For each of the sections in the app, add a tab to the action bar.
+
 		for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
+
 			// Create a tab with text corresponding to the page title defined by
 			// the adapter. Also specify this Activity object, which implements
 			// the TabListener interface, as the callback (listener) for when
@@ -220,9 +222,20 @@ public class MainActivity extends FragmentActivity implements
 				recipientsIntent.putExtra(ParseConstants.KEY_FILE_TYPE, fileType);
 				startActivity(recipientsIntent);
 			}
+
 			else if (requestCode == PICK_PHOTO_REQUEST || requestCode == TAKE_PHOTO_REQUEST)
 			{
-                launchAviaryEditor();
+
+                Intent recipientsIntent = new Intent(getApplicationContext(), RecipientsActivity.class);
+                recipientsIntent.setData(mMediaUri);
+
+                String fileType = ParseConstants.TYPE_IMAGE;
+
+                recipientsIntent.putExtra(ParseConstants.KEY_FILE_TYPE, fileType);
+                startActivity(recipientsIntent);
+
+                // TODO: Disable the ad-ware dialog!
+                //launchAviaryEditor();
 			}
 			else if (requestCode == AVIARY_EDIT_REQUEST)
 			{
@@ -312,6 +325,7 @@ public class MainActivity extends FragmentActivity implements
         }
     }
 
+    /*
     public void launchAviaryEditor() {
         if (!isAviaryInstalled())
         {
@@ -383,7 +397,9 @@ public class MainActivity extends FragmentActivity implements
             startActivityForResult(newIntent, AVIARY_EDIT_REQUEST);
         }
     }
+    */
 
+    /*
     public boolean isAviaryInstalled() {
         Intent intent = new Intent( "aviary.intent.action.EDIT" );
         intent.setType( "image/*" );
@@ -391,6 +407,7 @@ public class MainActivity extends FragmentActivity implements
                 .queryIntentActivities( intent, PackageManager.MATCH_DEFAULT_ONLY );
         return list.size() > 0;
     }
+    */
 	
 	private void navigateToLogin() {
 		Intent intent = new Intent(this, LoginActivity.class);

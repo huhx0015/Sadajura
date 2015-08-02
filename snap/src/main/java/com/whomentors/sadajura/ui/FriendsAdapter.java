@@ -1,14 +1,12 @@
 package com.whomentors.sadajura.ui;
 
 import java.util.List;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import com.developer.appname.android.R;
 import com.whomentors.sadajura.fragment.FriendsFragment;
 import com.parse.ParseFile;
@@ -38,9 +36,9 @@ public class FriendsAdapter extends ArrayAdapter<ParseUser> {
 			holder = new ViewHolder();
 			holder.profileImageView = (ParseImageView) convertView.findViewById(R.id.profileImage);
 			holder.nameLabel = (TextView)convertView.findViewById(R.id.senderLabel);
-			
 			convertView.setTag(holder);
 		}
+
 		else {
 			
 			holder = (ViewHolder)convertView.getTag();
@@ -54,8 +52,8 @@ public class FriendsAdapter extends ArrayAdapter<ParseUser> {
 
             Picasso.with(mContext).load(profileImage.getUrl()).into(holder.profileImageView);
         }
-        else
-        {
+
+        else {
             holder.profileImageView.setImageResource(R.drawable.ic_profile);
         }
 
@@ -79,9 +77,3 @@ public class FriendsAdapter extends ArrayAdapter<ParseUser> {
 		notifyDataSetChanged();
 	}
 }
-
-
-
-
-
-
