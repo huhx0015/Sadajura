@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.whomentors.sadajura.data.CJWishListModel;
+import com.whomentors.sadajura.data.SJWishListModel;
 import com.whomentors.sadajura.ui.recyclerview.SJListAdapter;
 import com.whomentors.sarajura.R;
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ public class WishListFragment extends Fragment {
     private Activity currentActivity; // Used to determine the activity class this fragment is currently attached to.
 
     // LIST VARIABLES
-    private ArrayList<CJWishListModel> wishListResult = new ArrayList<>();
+    private ArrayList<SJWishListModel> wishListResult = new ArrayList<>();
 
     // LOGGING VARIABLES
     private static final String LOG_TAG = WishListFragment.class.getSimpleName();
@@ -95,7 +95,7 @@ public class WishListFragment extends Fragment {
     /** RECYCLERVIEW METHODS ___________________________________________________________________ **/
 
     // setListAdapter(): Sets the recycler list adapter based on the artistList.
-    private void setListAdapter(ArrayList<CJWishListModel> wishList){
+    private void setListAdapter(ArrayList<SJWishListModel> wishList){
         SJListAdapter adapter = new SJListAdapter(wishList, true, currentActivity);
         wishListView.setAdapter(adapter);
     }

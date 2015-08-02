@@ -10,6 +10,7 @@ import android.app.AlertDialog;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -29,8 +30,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
-import com.whomentors.sadajura.chat.utils.Const;
 import com.whomentors.sadajura.data.ParseConstants;
+import com.whomentors.sadajura.data.SJPreferences;
 import com.whomentors.sadajura.ui.dialog.SJDialogBuilder;
 import com.whomentors.sadajura.ui.adapters.SectionsPagerAdapter;
 import com.parse.ParseAnalytics;
@@ -59,6 +60,10 @@ public class SJMainActivity extends FragmentActivity implements ActionBar.TabLis
     // ALERT VARIABLES
     private Boolean isAlert = false;
 
+    // LOCATION VARIABLES
+    private String origin = "United States of America";
+    private String destination = "United States of America";
+
     // LOGGING VARIABLES
 	public static final String LOG_TAG = SJMainActivity.class.getSimpleName();
 
@@ -74,6 +79,10 @@ public class SJMainActivity extends FragmentActivity implements ActionBar.TabLis
     // PARSE VARIABLES
 	protected List<ParseObject> subscribedChannels;
 
+    // PREFERENCE VARIABLES
+    private SharedPreferences SJ_prefs;
+    private static final String SJ_OPTIONS = "sj_options";
+
     // VIEW INJECTION VARIABLES
     @Bind(R.id.sj_main_pager) ViewPager mainViewPager;
 
@@ -85,6 +94,7 @@ public class SJMainActivity extends FragmentActivity implements ActionBar.TabLis
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+        loadPreferences(); // Loads the preference values.
         setUpLayout(); // Sets up the layout for the activity.
         setUpActionBar(); // Sets up the action bar attributes.
         retrieveParseData(); // Retrieves the Parse data about the current user.
@@ -167,6 +177,12 @@ public class SJMainActivity extends FragmentActivity implements ActionBar.TabLis
 		int itemId = item.getItemId();
 		
 		switch(itemId) {
+
+            // FLIGHTS:
+            case R.id.action_flight_info:
+                Intent intent = new Intent(this, SJFlightActivity.class);
+                startActivity(intent);
+                break;
 
             // CAMERA ACTION:
 			case R.id.action_camera:
@@ -492,5 +508,15 @@ public class SJMainActivity extends FragmentActivity implements ActionBar.TabLis
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
+    }
+
+    /** PREFERENCES METHODS ____________________________________________________________________ **/
+
+    private void loadPreferences() {
+
+        // PREFERENCES:
+        SJ_prefs = SJPreferences.initializePreferences(SJ_OPTIONS, this);
+        origin = SJPreferences.getOrigin(SJ_prefs);
+        destination = SJPreferences.getDestination(SJ_prefs);
     }
 }

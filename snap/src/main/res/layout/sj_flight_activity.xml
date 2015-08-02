@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/sj_flight_activity_layout">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/sj_toolbar_drop_shadow"
+        android:id="@+id/sj_flight_container_drop_shadow" />
+
+    <LinearLayout
+        android:id="@+id/sj_flight_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/sj_flight_origin_container"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ORIGIN"
+                android:id="@+id/sj_flight_origin_text"
+                android:typeface="sans"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/sj_flight_origin_spinner" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/sj_flight_destination_container"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DESTINATION"
+                android:id="@+id/sj_flight_destination_text"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <Spinner
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/sj_flight_destination_spinner" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

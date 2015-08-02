@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.squareup.picasso.Picasso;
-import com.whomentors.sadajura.data.CJWishListModel;
+import com.whomentors.sadajura.data.SJWishListModel;
 import com.whomentors.sarajura.R;
 import java.util.ArrayList;
 
@@ -28,7 +28,7 @@ public class SJListAdapter extends RecyclerView.Adapter<SJListAdapter.CJResultVi
     private Boolean isClickable = true; // Used to determine if the items are clickable or not.
 
     // LIST VARIABLES
-    private ArrayList<CJWishListModel> listResult;
+    private ArrayList<SJWishListModel> listResult;
 
     // LOGGING VARIABLES
     private static final String LOG_TAG = SJListAdapter.class.getSimpleName();
@@ -36,7 +36,7 @@ public class SJListAdapter extends RecyclerView.Adapter<SJListAdapter.CJResultVi
     /** INITIALIZATION METHODS _________________________________________________________________ **/
 
     // CJListAdapter(): Constructor method for CJListAdapter.
-    public SJListAdapter(ArrayList<CJWishListModel> list, Boolean clickable, Activity act){
+    public SJListAdapter(ArrayList<SJWishListModel> list, Boolean clickable, Activity act){
         this.currentActivity = act;
         this.isClickable = clickable;
         this.listResult = list;

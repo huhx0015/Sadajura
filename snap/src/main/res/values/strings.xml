@@ -33,6 +33,7 @@
     <string name="menu_logout_label">Logout</string>
     <string name="menu_remove_label">Remove</string>
     <string name="menu_add_label">Add</string>
+    <string name="menu_flight_label">Flight</string>
     <string name="menu_settings_label">Settings</string>
     <string name="empty_inbox_label">No new messages!</string>
     <string name="empty_friends_label">Tap above to add some friends.</string>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="duty_locations">
+        <item>Afganistan</item>
+        <item>Algeria</item>
+        <item>Angola</item>
+        <item>Argentina</item>
+        <item>Brazil</item>
+        <item>China</item>
+        <item>Denmark</item>
+        <item>Ethiopia</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Haiti</item>
+        <item>India</item>
+        <item>Japan</item>
+        <item>Kenya</item>
+        <item>Laos</item>
+        <item>Morocco</item>
+        <item>Nigeria</item>
+        <item>Oman</item>
+        <item>Phillipines</item>
+        <item>Qatar</item>
+        <item>Russia</item>
+        <item>South Korea</item>
+        <item>Turkey</item>
+        <item>Uganda</item>
+        <item>United States of America</item>
+        <item>Vietnam</item>
+        <item>Western Sahara</item>
+        <item>Yemen</item>
+        <item>Zimbabwe</item>
+    </string-array>
+</resources>

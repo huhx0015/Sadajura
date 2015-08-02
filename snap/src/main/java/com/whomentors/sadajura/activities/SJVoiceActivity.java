@@ -29,16 +29,14 @@ public class SJVoiceActivity extends Activity {
 
         setUpLayout(); // Sets up the layout for the activity.
 
-        //startSpeech("SA-RA JU-RA Alert!", this); // Starts the TTS speech alert.
-
-        startSpeech("YO BO SAY YO! SA-RA JU-RA Alert!", this); // Starts the TTS speech alert.
+        startSpeech("SA-RA JU-RA Alert!", this); // Starts the TTS speech alert.
 
         // Creates a new timer thread for temporarily pausing the app for the TTS speech
         // to process.
         Thread timer = new Thread() {
 
             public void run() {
-                try { sleep(15000); } // Time to sleep in milliseconds.
+                try { sleep(5000); } // Time to sleep in milliseconds.
                 catch (InterruptedException e) { e.printStackTrace(); } // Prints error code.
                 finally { launchMainIntent();  } // Launches the next activity.
             }
