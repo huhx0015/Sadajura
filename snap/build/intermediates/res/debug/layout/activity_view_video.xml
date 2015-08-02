@@ -6,7 +6,7 @@
     android:background="@android:color/black"
     tools:context=".ViewVideoActivity" >
 
-    <com.developer.appname.android.TextureVideoView
+    <com.whomentors.sadajura.ui.TextureVideoView
         android:id="@+id/videoView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -46,4 +46,4 @@
         android:scaleType="fitXY" />
 
 </RelativeLayout>
-<!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Projects/Sadajura/snap/src/main/res/layout/activity_view_video.xml -->
+<!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/layout/activity_view_video.xml -->

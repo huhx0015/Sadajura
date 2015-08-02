@@ -7,4 +7,4 @@
     <item android:id="@+id/action_settings" android:orderInCategory = "3" android:title="@string/menu_settings_label"></item>
     
 </menu>
-<!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Projects/Sadajura/snap/src/main/res/menu/main.xml -->
+<!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/menu/main.xml -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.developer.appname.android.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.whomentors.sadajura.ui.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -34,4 +34,4 @@
         android:paddingRight="10dp"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-</com.developer.appname.android.CheckableLinearLayout><!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Projects/Sadajura/snap/src/main/res/layout/recipients_item.xml -->
+</com.whomentors.sadajura.ui.CheckableLinearLayout><!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/layout/recipients_item.xml -->

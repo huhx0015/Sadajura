@@ -26,4 +26,4 @@
         android:drawable="@drawable/spinner_ab_focused_customactionbar" />
     <item android:drawable="@drawable/spinner_ab_default_customactionbar" />
 </selector>
-<!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Projects/Sadajura/snap/src/main/res/drawable/spinner_background_ab_customactionbar.xml -->
+<!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/drawable/spinner_background_ab_customactionbar.xml -->

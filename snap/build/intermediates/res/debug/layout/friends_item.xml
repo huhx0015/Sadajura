@@ -31,4 +31,4 @@
 	    android:layout_toRightOf="@+id/thumbnail"
 	    android:textAppearance="?android:attr/textAppearanceMedium" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Projects/Sadajura/snap/src/main/res/layout/friends_item.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/layout/friends_item.xml -->

@@ -1,1 +1,1 @@
-include ':app', ':snap'
+include ':snap'

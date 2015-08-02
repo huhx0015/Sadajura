@@ -6,4 +6,4 @@
           android:title="@string/menu_search_label"
           android:actionViewClass="android.widget.SearchView" />
 </menu>
-<!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Projects/Sadajura/snap/src/main/res/menu/edit_friends.xml -->
+<!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/menu/edit_friends.xml -->
