@@ -453,11 +453,12 @@
     <string name="title_activity_recipients">Recipients</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_sign_up">Create Account</string>
-    <string name="title_activity_view_image">YourAppName</string>
-    <string name="title_activity_view_video">YourAppName</string>
+    <string name="title_activity_view_image">Sadajura</string>
+    <string name="title_activity_view_video">Sadajura</string>
     <string name="title_section1">Messages</string>
     <string name="title_section2">Requests</string>
     <string name="title_section3">Friends</string>
+    <string name="title_section4">Wish List</string>
     <string name="to">To:</string>
     <string name="type_msg">Type message</string>
     <string name="username">Username</string>

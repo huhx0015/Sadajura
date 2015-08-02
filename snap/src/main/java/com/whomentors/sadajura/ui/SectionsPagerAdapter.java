@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.whomentors.sadajura.fragment.FriendsFragment;
 import com.whomentors.sadajura.fragment.InboxFragment;
 import com.whomentors.sadajura.fragment.RequestsFragment;
+import com.whomentors.sadajura.fragment.WishListFragment;
 import com.whomentors.sarajura.R;
 
 /**
@@ -44,6 +45,8 @@ public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
 				return new RequestsFragment();
 			case 2:
 				return new FriendsFragment();
+			case 3:
+				return new WishListFragment();
 		}
 
 		return null;
@@ -58,12 +61,15 @@ public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
 	public CharSequence getPageTitle(int position) {
 		Locale l = Locale.getDefault();
 		switch (position) {
-		case 0:
-			return mContext.getString(R.string.title_section1).toUpperCase(l);
-		case 1:
-			return mContext.getString(R.string.title_section2).toUpperCase(l);
-		case 2:
-			return mContext.getString(R.string.title_section3).toUpperCase(l);
+
+			case 0:
+				return mContext.getString(R.string.title_section1).toUpperCase(l);
+			case 1:
+				return mContext.getString(R.string.title_section2).toUpperCase(l);
+			case 2:
+				return mContext.getString(R.string.title_section3).toUpperCase(l);
+			case 3:
+				return mContext.getString(R.string.title_section4).toUpperCase(l);
 		}
 		
 		return null;
