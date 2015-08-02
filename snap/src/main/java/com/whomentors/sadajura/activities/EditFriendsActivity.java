@@ -374,9 +374,7 @@ public class EditFriendsActivity extends ListActivity {
 		switch (item.getItemId()) {
 		
 			case android.R.id.home:
-	
 				this.finish();
-
 			break;
 		}
 			

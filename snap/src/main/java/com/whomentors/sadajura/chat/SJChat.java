@@ -1,9 +1,5 @@
 package com.whomentors.sadajura.chat;
 
-/**
- * Created by Michael Yoon Huh on 8/1/2015.
- */
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -30,7 +26,6 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -44,7 +39,6 @@ import com.whomentors.sadajura.chat.utils.Const;
 import com.whomentors.sadajura.data.ParseConstants;
 import com.whomentors.sadajura.ui.QustomDialogBuilder;
 import com.whomentors.sarajura.R;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -54,6 +48,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+
+/**
+ * Created by Michael Yoon Huh on 8/1/2015.
+ */
 
 /**
  * The Class Chat is the Activity class that holds main chat screen. It shows
@@ -69,7 +67,6 @@ public class SJChat extends CustomActivity {
     public static final int TAKE_VIDEO_REQUEST = 1;
     public static final int PICK_PHOTO_REQUEST = 2;
     public static final int PICK_VIDEO_REQUEST = 3;
-    public static final int AVIARY_EDIT_REQUEST = 4;
     public static final int MEDIA_TYPE_IMAGE = 5;
     public static final int MEDIA_TYPE_VIDEO = 6;
     public static final int FILE_SIZE_LIMIT = 1024*1024*10; // 10 MB
