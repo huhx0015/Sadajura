@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
@@ -37,75 +36,185 @@ import com.whomentors.sadajura.chat.model.Conversation;
 import com.whomentors.sadajura.chat.utils.Const;
 import com.whomentors.sadajura.data.ParseConstants;
 import com.whomentors.sadajura.ui.dialog.SJDialogBuilder;
+import com.whomentors.sadajura.ui.view.SJUnbind;
 import com.whomentors.sarajura.R;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Created by Michael Yoon Huh on 8/1/2015.
- */
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
-/**
- * The Class Chat is the Activity class that holds main chat screen. It shows
- * all the conversation messages between two users and also allows the user to
- * send and receive messages.
+/** -----------------------------------------------------------------------------------------------
+ *  [SJChatActivity] CLASS
+ *  DESCRIPTION: The Class Chat is the Activity class that holds main chat screen. It shows all the
+ *  conversation messages between two users and also allows the user to send and receive messages.
+ *  -----------------------------------------------------------------------------------------------
  */
 public class SJChatActivity extends CustomActivity {
 
-    /** SJChat Additions **/
+    /** CLASS VARIABLES ________________________________________________________________________ **/
+
+    // ACTIVITY VARIABLES
+    private boolean isRunning; // Flag to hold if the activity is running or not.
 
     // CAMERA DIALOG VARIABLES:
     public static final int TAKE_PHOTO_REQUEST = 0;
-    public static final int TAKE_VIDEO_REQUEST = 1;
     public static final int PICK_PHOTO_REQUEST = 2;
-    public static final int PICK_VIDEO_REQUEST = 3;
     public static final int MEDIA_TYPE_IMAGE = 5;
-    public static final int MEDIA_TYPE_VIDEO = 6;
-    public static final int FILE_SIZE_LIMIT = 1024*1024*10; // 10 MB
     protected Uri mMediaUri;
-    protected Uri mOutputUri;
+
+    // CHAT VARIABLES
+    private ArrayList<Conversation> converseList; // The Conversation list.
+    private ChatAdapter chatAdapter; // The chat adapter.
+    private Date lastMsgDate; // The date of last message in conversation.
+    private String chatFriend; // The user name of chat recipient.
 
     // LOGGING VARIABLES
     private static final String LOG_TAG = SJChatActivity.class.getSimpleName();
 
     // PARSE VARIABLES
-    public static ParseUser user;
+    public static ParseUser currentUser;
 
-    // getIntentBundle(): Retrieves the data from the previous activity.
-    private void getIntentBundle() {
+    // THREAD VARIABLES
+    private static Handler handler;
 
-        Bundle extras = getIntent().getExtras();
+    // VIEW INJECTION VARIABLES
+    @Bind(R.id.sj_chat_edit_text) EditText chatEditText; // The Editext to compose the message.
 
-        // Tries to retrieve the additional information from the bundle.
-        if (extras != null) {
+    /** ACTIVITY LIFECYCLE METHODS _____________________________________________________________ **/
 
-            // Sets the friend name.
-            friend = getIntent().getExtras().getString("selectedUsername");
-            Log.d(LOG_TAG, "getIntentBundle(): Friend name is: " + friend);
+    // onCreate(): The initial function that is called when the activity is run. onCreate() only
+    // runs when the activity is first started.
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-            getActionBar().setTitle(friend); // Sets the title of the action bar.
+        setUpLayout(); // Sets up the layout for the activity.
+        setUpConverstation(); // Sets up the conversation view for the activity.
+
+        handler = new Handler();
+        currentUser = ParseUser.getCurrentUser(); // Retrieves the current Parse user.
+        Log.d(LOG_TAG, "onCreate(): Current selected ParseUser: " + currentUser.getUsername());
+
+        getIntentBundle(); // Retrieves the bundle from the previous activity.
+        setUpButtons(); // Sets up the listeners for the Button objects in the activity.
+    }
+
+    // onResume(): This function runs immediately after onCreate() finishes and is always re-run
+    // whenever the activity is resumed from an onPause() state.
+    @Override
+    protected void onResume() {
+        super.onResume();
+        isRunning = true;
+        loadConversationList();
+    }
+
+    // onPause(): This function is called whenever the current activity is suspended or another
+    // activity is launched.
+    @Override
+    protected void onPause() {
+        super.onPause();
+        isRunning = false;
+    }
+
+    // onDestroy(): This function runs when the activity has terminated and is being destroyed.
+    // Calls recycleMemory() to free up memory allocation.
+    @Override
+    protected void onDestroy() {
+
+        super.onDestroy();
+
+        // Recycles all View objects to free up memory resources.
+        SJUnbind.recycleMemory(findViewById(R.id.sj_chat_activity_layout));
+    }
+
+    /** PHYSICAL BUTTON FUNCTIONALITY __________________________________________________________ **/
+
+    // BACK KEY:
+    // onBackPressed(): Defines the action to take when the physical back button key is pressed.
+    @Override
+    public void onBackPressed() {
+        finish(); // Finishes the activity.
+    }
+
+    /** ACTIVITY EXTENSION METHODS _____________________________________________________________ **/
+
+    // onActivityResult(): Run after returning to the activity after taking or choosing a photo.
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == PICK_PHOTO_REQUEST) {
+
+                if (data == null) {
+                    Toast.makeText(this, getString(R.string.general_error), Toast.LENGTH_LONG).show();
+                }
+
+                else { mMediaUri = data.getData(); }
+            }
+
+            else {
+                Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                mediaScanIntent.setData(mMediaUri);
+                sendBroadcast(mediaScanIntent);
+            }
+
+            if (requestCode == PICK_PHOTO_REQUEST || requestCode == TAKE_PHOTO_REQUEST) {
+
+                Intent recipientsIntent = new Intent(getApplicationContext(), RecipientsActivity.class);
+                recipientsIntent.setData(mMediaUri);
+
+                String fileType = ParseConstants.TYPE_IMAGE;
+
+                recipientsIntent.putExtra(ParseConstants.KEY_FILE_TYPE, fileType);
+                startActivity(recipientsIntent);
+
+            }
         }
+
+        else if (resultCode == RESULT_CANCELED) {}
+    }
+
+    // onClick(): Runs when a button is clicked.
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+
+        // SEND MESSAGE:
+        if (v.getId() == R.id.sj_chat_send_button) { sendMessage(); }
+    }
+
+    // onOptionsItemSelected(): Defines the action to take when the menu options are selected.
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == android.R.id.home) { finish(); }
+        return super.onOptionsItemSelected(item);
+    }
+
+    /** LAYOUT METHODS _________________________________________________________________________ **/
+
+    // setUpLayout(): Sets up the layout for the activity.
+    private void setUpLayout() {
+        setContentView(R.layout.sj_chat_activity); // Sets the XML layout file.
+        ButterKnife.bind(this); // ButterKnife view injection initialization.
     }
 
     // setUpButton(): Set up the Button objects for the activity.
     private void setUpButtons() {
 
-        ImageButton cameraButton = (ImageButton) findViewById(R.id.btnPicture);
+        ImageButton cameraButton = (ImageButton) findViewById(R.id.sj_chat_camera_button);
 
         // CAMERA BUTTON:
         cameraButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
-                // TODO: Add the dialog popup for the Camera menu.
 
                 final SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(SJChatActivity.this);
 
@@ -123,14 +232,14 @@ public class SJChatActivity extends CustomActivity {
                 customDialog.setCanceledOnTouchOutside(true);
                 customDialog.show();
 
-                cameraOptions.setOnItemClickListener(new AdapterView.OnItemClickListener()
-                {
+                cameraOptions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3)
-                    {
+                    public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
                         customDialog.cancel();
 
-                        switch(position) {
+                        switch (position) {
+
+                            // TAKE A PICURE:
                             case 0: // Take picture
 
                                 Intent takePhotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -139,74 +248,26 @@ public class SJChatActivity extends CustomActivity {
                                     // display an error
                                     Toast.makeText(SJChatActivity.this, R.string.error_external_storage,
                                             Toast.LENGTH_LONG).show();
-                                }
-                                else {
+                                } else {
                                     takePhotoIntent.putExtra(MediaStore.EXTRA_OUTPUT, mMediaUri);
                                     startActivityForResult(takePhotoIntent, TAKE_PHOTO_REQUEST);
                                 }
                                 break;
-                            case 1: // Take video
-                                Intent videoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
-                                mMediaUri = getOutputMediaFileUri(MEDIA_TYPE_VIDEO);
-                                if (mMediaUri == null) {
-                                    // display an error
-                                    Toast.makeText(SJChatActivity.this, R.string.error_external_storage,
-                                            Toast.LENGTH_LONG).show();
-                                }
-                                else {
-                                    videoIntent.putExtra(MediaStore.EXTRA_OUTPUT, mMediaUri);
-                                    videoIntent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 10);
 
-                                    String manufacturer = android.os.Build.MANUFACTURER;
-
-                                    if (manufacturer.equals("HTC") || manufacturer.equals("HTC Corporation"))
-                                    {
-                                        System.out.println("manufacturer = HTC");
-
-                                        videoIntent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 0); // 0 = lowest res
-                                    }
-                                    else
-                                    {
-                                        videoIntent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 0); // 0 = lowest res
-
-                                        final Toast tag = Toast.makeText(getBaseContext(), R.string.video_size_warning,Toast.LENGTH_SHORT);
-
-                                        tag.show();
-
-                                        new CountDownTimer(7000, 1000)
-                                        {
-                                            public void onTick(long millisUntilFinished) {tag.show();}
-                                            public void onFinish() {tag.show();}
-
-                                        }.start();
-
-                                        long maxVideoSize = 7*1024*1024; // 10 MB // 10491520L
-
-                                        videoIntent.putExtra(MediaStore.EXTRA_SIZE_LIMIT, maxVideoSize);
-                                    }
-
-                                    startActivityForResult(videoIntent, TAKE_VIDEO_REQUEST);
-                                }
-                                break;
-                            case 2: // Choose picture
+                            // CHOOSE A PICTURE:
+                            case 2:
                                 Intent choosePhotoIntent = new Intent(Intent.ACTION_GET_CONTENT);
                                 choosePhotoIntent.setType("image/*");
                                 startActivityForResult(choosePhotoIntent, PICK_PHOTO_REQUEST);
-                                break;
-                            case 3: // Choose video
-                                Intent chooseVideoIntent = new Intent(Intent.ACTION_GET_CONTENT);
-                                chooseVideoIntent.setType("video/*");
-                                Toast.makeText(SJChatActivity.this, R.string.video_file_size_warning, Toast.LENGTH_LONG).show();
-                                startActivityForResult(chooseVideoIntent, PICK_VIDEO_REQUEST);
                                 break;
                         }
                     }
 
                     private Uri getOutputMediaFileUri(int mediaType) {
+
                         // To be safe, you should check that the SDCard is mounted
                         // using Environment.getExternalStorageState() before doing this.
                         if (isExternalStorageAvailable()) {
-                            // get the URI
 
                             // 1. Get the external storage directory
                             String appName = SJChatActivity.this.getString(R.string.app_name);
@@ -215,8 +276,8 @@ public class SJChatActivity extends CustomActivity {
                                     appName);
 
                             // 2. Create our subdirectory
-                            if (! mediaStorageDir.exists()) {
-                                if (! mediaStorageDir.mkdirs()) {
+                            if (!mediaStorageDir.exists()) {
+                                if (!mediaStorageDir.mkdirs()) {
                                     Log.e(LOG_TAG, "Failed to create directory.");
                                     return null;
                                 }
@@ -232,23 +293,7 @@ public class SJChatActivity extends CustomActivity {
                             String path = mediaStorageDir.getPath() + File.separator;
                             if (mediaType == MEDIA_TYPE_IMAGE) {
                                 mediaFile = new File(path + "IMG_" + timestamp + ".jpg");
-                            }
-                            else if (mediaType == MEDIA_TYPE_VIDEO) {
-
-                                String manufacturer = android.os.Build.MANUFACTURER;
-
-                                if (manufacturer.equals("HTC") || manufacturer.equals("HTC Corporation"))
-                                {
-                                    System.out.println("manufacturer = HTC");
-
-                                    mediaFile = new File(path + "VID_" + timestamp + ".3gp");
-                                }
-                                else
-                                {
-                                    mediaFile = new File(path + "VID_" + timestamp + ".mp4");
-                                }
-                            }
-                            else {
+                            } else {
                                 return null;
                             }
 
@@ -256,8 +301,7 @@ public class SJChatActivity extends CustomActivity {
 
                             // 5. Return the file's URI
                             return Uri.fromFile(mediaFile);
-                        }
-                        else {
+                        } else {
                             return null;
                         }
                     }
@@ -267,8 +311,7 @@ public class SJChatActivity extends CustomActivity {
 
                         if (state.equals(Environment.MEDIA_MOUNTED)) {
                             return true;
-                        }
-                        else {
+                        } else {
                             return false;
                         }
                     }
@@ -277,287 +320,144 @@ public class SJChatActivity extends CustomActivity {
         });
     }
 
+    /** CHAT METHODS ___________________________________________________________________________ **/
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    // setUpConverstation(): Sets up the conversation view.
+    private void setUpConverstation() {
 
-        if (resultCode == RESULT_OK) {
-            if (requestCode == PICK_PHOTO_REQUEST || requestCode == PICK_VIDEO_REQUEST) {
-                if (data == null) {
-                    Toast.makeText(this, getString(R.string.general_error), Toast.LENGTH_LONG).show();
-                }
-                else {
-                    mMediaUri = data.getData();
-                }
-
-                if (requestCode == PICK_VIDEO_REQUEST) {
-                    // make sure the file is less than 10 MB
-                    int fileSize = 0;
-                    InputStream inputStream = null;
-
-                    try {
-                        inputStream = getContentResolver().openInputStream(mMediaUri);
-                        fileSize = inputStream.available();
-                    }
-                    catch (FileNotFoundException e) {
-                        Toast.makeText(this, R.string.error_opening_file, Toast.LENGTH_LONG).show();
-                        return;
-                    }
-                    catch (IOException e) {
-                        Toast.makeText(this, R.string.error_opening_file, Toast.LENGTH_LONG).show();
-                        return;
-                    }
-                    finally {
-                        try {
-                            inputStream.close();
-                        } catch (IOException e) { /* Intentionally blank */ }
-                    }
-
-                    if (fileSize >= FILE_SIZE_LIMIT) {
-                        Toast.makeText(this, R.string.error_file_size_too_large, Toast.LENGTH_LONG).show();
-                        return;
-                    }
-                }
-            }
-            else {
-                Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-                mediaScanIntent.setData(mMediaUri);
-                sendBroadcast(mediaScanIntent);
-            }
-
-            if (requestCode == PICK_VIDEO_REQUEST || requestCode == TAKE_VIDEO_REQUEST) {
-
-                String fileType;
-                Intent recipientsIntent = new Intent(this, RecipientsActivity.class);
-                recipientsIntent.setData(mMediaUri);
-
-                fileType = ParseConstants.TYPE_VIDEO;
-
-                recipientsIntent.putExtra(ParseConstants.KEY_FILE_TYPE, fileType);
-                startActivity(recipientsIntent);
-            }
-
-            else if (requestCode == PICK_PHOTO_REQUEST || requestCode == TAKE_PHOTO_REQUEST)
-            {
-
-                Intent recipientsIntent = new Intent(getApplicationContext(), RecipientsActivity.class);
-                recipientsIntent.setData(mMediaUri);
-
-                String fileType = ParseConstants.TYPE_IMAGE;
-
-                recipientsIntent.putExtra(ParseConstants.KEY_FILE_TYPE, fileType);
-                startActivity(recipientsIntent);
-
-            }
-        }
-
-        else if (resultCode == RESULT_CANCELED) {
-
-        }
-    }
-
-
-    //----------------------------------------------------------------------------------------------
-    /** END ADDITIONS **/
-
-
-    /** The Conversation list. */
-    private ArrayList<Conversation> convList;
-
-    /** The chat adapter. */
-    private ChatAdapter adp;
-
-    /** The Editext to compose the message. */
-    private EditText txt;
-
-    /** The user name of buddy. */
-    private String friend;
-
-    /** The date of last message in conversation. */
-    private Date lastMsgDate;
-
-    /** Flag to hold if the activity is running or not. */
-    private boolean isRunning;
-
-    /** The handler. */
-    private static Handler handler;
-
-    /* (non-Javadoc)
-     * @see android.support.v4.app.FragmentActivity#onCreate(android.os.Bundle)
-     */
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.chat);
-
-        convList = new ArrayList<Conversation>();
-        ListView list = (ListView) findViewById(R.id.list);
-        adp = new ChatAdapter();
-        list.setAdapter(adp);
+        converseList = new ArrayList<Conversation>();
+        ListView list = (ListView) findViewById(R.id.sj_chat_list);
+        chatAdapter = new ChatAdapter();
+        list.setAdapter(chatAdapter);
         list.setTranscriptMode(AbsListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
         list.setStackFromBottom(true);
 
-        txt = (EditText) findViewById(R.id.txt);
-        txt.setInputType(InputType.TYPE_CLASS_TEXT
-                | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
-
-        setTouchNClick(R.id.btnSend);
-
-        friend = getIntent().getStringExtra(Const.EXTRA_DATA);
-
-
-        handler = new Handler();
-
-        // TODO: New code for retrieving the current user.
-        user = ParseUser.getCurrentUser();
-        Log.d(LOG_TAG, "onCreate(): Current selected ParseUser: " + user.getUsername());
-
-        getIntentBundle(); // Retrieves the bundle from the previous activity.
-        setUpButtons(); // Sets up the listeners for the Button objects in the activity.
+        chatEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
+        setTouchNClick(R.id.sj_chat_send_button);
     }
 
-    /* (non-Javadoc)
-     * @see android.support.v4.app.FragmentActivity#onResume()
-     */
-    @Override
-    protected void onResume()
-    {
-        super.onResume();
-        isRunning = true;
-        loadConversationList();
-    }
+    // sendMessage(): Call this method to Send message to opponent. It does nothing if the text is
+    // empty otherwise it creates a Parse object for Chat message and send it to Parse server.
+    private void sendMessage() {
 
-    /* (non-Javadoc)
-     * @see android.support.v4.app.FragmentActivity#onPause()
-     */
-    @Override
-    protected void onPause()
-    {
-        super.onPause();
-        isRunning = false;
-    }
-
-    /* (non-Javadoc)
-     * @see com.socialshare.custom.CustomFragment#onClick(android.view.View)
-     */
-    @Override
-    public void onClick(View v)
-    {
-        super.onClick(v);
-        if (v.getId() == R.id.btnSend)
-        {
-            sendMessage();
-        }
-
-    }
-
-    /**
-     * Call this method to Send message to opponent. It does nothing if the text
-     * is empty otherwise it creates a Parse object for Chat message and send it
-     * to Parse server.
-     */
-    private void sendMessage()
-    {
-        if (txt.length() == 0)
+        if (chatEditText.length() == 0)
             return;
 
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(txt.getWindowToken(), 0);
+        imm.hideSoftInputFromWindow(chatEditText.getWindowToken(), 0);
 
-        String s = txt.getText().toString();
+        String s = chatEditText.getText().toString();
         final Conversation c = new Conversation(s, new Date(),
-                user.getUsername());
+                currentUser.getUsername());
         c.setStatus(Conversation.STATUS_SENDING);
-        convList.add(c);
-        adp.notifyDataSetChanged();
-        txt.setText(null);
+        converseList.add(c);
+        chatAdapter.notifyDataSetChanged();
+        chatEditText.setText(null);
 
         ParseObject po = new ParseObject("Chat");
-        po.put("sender", user.getUsername());
-        po.put("receiver", friend);
+        po.put("sender", currentUser.getUsername());
+        po.put("receiver", chatFriend);
         // po.put("createdAt", "");
         po.put("message", s);
         po.saveEventually(new SaveCallback() {
 
             @Override
-            public void done(ParseException e)
-            {
+            public void done(ParseException e) {
                 if (e == null)
                     c.setStatus(Conversation.STATUS_SENT);
                 else
                     c.setStatus(Conversation.STATUS_FAILED);
-                adp.notifyDataSetChanged();
+                chatAdapter.notifyDataSetChanged();
             }
         });
     }
 
-    /**
-     * Load the conversation list from Parse server and save the date of last
-     * message that will be used to load only recent new messages
-     */
-    private void loadConversationList()
-    {
+    // loadConverstationList(): Load the conversation list from Parse server and save the date of
+    // last message that will be used to load only recent new messages
+    private void loadConversationList() {
+
         ParseQuery<ParseObject> q = ParseQuery.getQuery("Chat");
-        if (convList.size() == 0)
-        {
-            // load all messages...
+
+        // Load all messages.
+        if (converseList.size() == 0) {
             ArrayList<String> al = new ArrayList<String>();
-            al.add(friend);
-            al.add(user.getUsername());
+            al.add(chatFriend);
+            al.add(currentUser.getUsername());
             q.whereContainedIn("sender", al);
             q.whereContainedIn("receiver", al);
         }
-        else
-        {
-            // load only newly received message..
-            if (lastMsgDate != null)
-                q.whereGreaterThan("createdAt", lastMsgDate);
-            q.whereEqualTo("sender", friend);
-            q.whereEqualTo("receiver", user.getUsername());
+
+        // Loads only newly received messages.
+        else {
+
+            if (lastMsgDate != null) { q.whereGreaterThan("createdAt", lastMsgDate); }
+            q.whereEqualTo("sender", chatFriend);
+            q.whereEqualTo("receiver", currentUser.getUsername());
         }
+
         q.orderByDescending("createdAt");
         q.setLimit(30);
         q.findInBackground(new FindCallback<ParseObject>() {
 
             @Override
-            public void done(List<ParseObject> li, ParseException e)
-            {
-                if (li != null && li.size() > 0)
-                {
-                    for (int i = li.size() - 1; i >= 0; i--)
-                    {
+            public void done(List<ParseObject> li, ParseException e) {
+
+                if (li != null && li.size() > 0) {
+
+                    for (int i = li.size() - 1; i >= 0; i--) {
                         ParseObject po = li.get(i);
                         Conversation c = new Conversation(po
                                 .getString("message"), po.getCreatedAt(), po
                                 .getString("sender"));
-                        convList.add(c);
-                        if (lastMsgDate == null
-                                || lastMsgDate.before(c.getDate()))
+                        converseList.add(c);
+
+                        if (lastMsgDate == null || lastMsgDate.before(c.getDate())) {
                             lastMsgDate = c.getDate();
-                        adp.notifyDataSetChanged();
+                        }
+
+                        chatAdapter.notifyDataSetChanged();
                     }
                 }
+
                 handler.postDelayed(new Runnable() {
 
                     @Override
-                    public void run()
-                    {
+                    public void run() {
                         if (isRunning)
                             loadConversationList();
                     }
                 }, 1000);
             }
         });
-
     }
 
-    /**
-     * The Class ChatAdapter is the adapter class for Chat ListView. This
-     * adapter shows the Sent or Receieved Chat message in each list item.
+    /** ADDITIONAL METHODS _____________________________________________________________________ **/
+
+    // getIntentBundle(): Retrieves the Bundle data from the previous activity.
+    private void getIntentBundle() {
+
+        Bundle extras = getIntent().getExtras();
+
+        // Tries to retrieve the additional information from the bundle.
+        if (extras != null) {
+
+            // Sets the friend name.
+            chatFriend = getIntent().getStringExtra(Const.EXTRA_DATA);
+            chatFriend = getIntent().getExtras().getString("selectedUsername");
+            Log.d(LOG_TAG, "getIntentBundle(): Friend name is: " + chatFriend);
+
+            getActionBar().setTitle("Chat with " + chatFriend); // Sets the title of the action bar.
+        }
+    }
+
+    /** --------------------------------------------------------------------------------------------
+     *  [ChatAdapter] CLASS
+     *  DESCRIPTION: The Class ChatAdapter is the adapter class for Chat ListView. This
+     *  adapter shows the Sent or Receieved Chat message in each list item.
+     *  --------------------------------------------------------------------------------------------
      */
-    private class ChatAdapter extends BaseAdapter
-    {
+
+    private class ChatAdapter extends BaseAdapter {
 
         /* (non-Javadoc)
          * @see android.widget.Adapter#getCount()
@@ -565,7 +465,7 @@ public class SJChatActivity extends CustomActivity {
         @Override
         public int getCount()
         {
-            return convList.size();
+            return converseList.size();
         }
 
         /* (non-Javadoc)
@@ -574,7 +474,7 @@ public class SJChatActivity extends CustomActivity {
         @Override
         public Conversation getItem(int arg0)
         {
-            return convList.get(arg0);
+            return converseList.get(arg0);
         }
 
         /* (non-Javadoc)
@@ -621,18 +521,5 @@ public class SJChatActivity extends CustomActivity {
 
             return v;
         }
-    }
-
-    /* (non-Javadoc)
-     * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
-     */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        if (item.getItemId() == android.R.id.home)
-        {
-            finish();
-        }
-        return super.onOptionsItemSelected(item);
     }
 }

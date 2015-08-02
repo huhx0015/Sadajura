@@ -18,14 +18,13 @@ import com.whomentors.sadajura.ui.dialog.SJDialogBuilder;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.RequestPasswordResetCallback;
-import com.whomentors.sadajura.ui.view.CJUnbind;
+import com.whomentors.sadajura.ui.view.SJUnbind;
 import com.whomentors.sarajura.R;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /** -----------------------------------------------------------------------------------------------
  *  SJPasswordResetActivity] CLASS
- *  DEVELOPER: Michael Yoon Huh
  *  DESCRIPTION: An activity class that displays the password reset screen.
  *  -----------------------------------------------------------------------------------------------
  */
@@ -59,7 +58,7 @@ public class SJPasswordResetActivity extends Activity {
     @Override
     protected void onStop() {
         super.onStop();
-        finish(); // The CJLoginActivity is terminated at this point.
+        finish(); // The activity is terminated at this point.
     }
 
     // onDestroy(): This function runs when the activity has terminated and is being destroyed.
@@ -70,7 +69,7 @@ public class SJPasswordResetActivity extends Activity {
         super.onDestroy();
 
         // Recycles all View objects to free up memory resources.
-        CJUnbind.recycleMemory(findViewById(R.id.sj_password_reset_activity_layout), this);
+        SJUnbind.recycleMemory(findViewById(R.id.sj_password_reset_activity_layout));
     }
 
     /** ACTIVITY EXTENSION METHODS _____________________________________________________________ **/

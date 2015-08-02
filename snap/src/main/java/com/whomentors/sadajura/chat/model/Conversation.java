@@ -1,7 +1,6 @@
 package com.whomentors.sadajura.chat.model;
 
 import com.parse.ParseUser;
-import com.whomentors.sadajura.chat.UserList;
 
 import java.util.Date;
 

@@ -49,10 +49,8 @@
     <string name="terms_privacy">By creating an account, you agree to the &lt;a href="http://yourserver.com/snapsecret/termsofuse.html">Terms of Use&lt;/a> and your are acknowledging that you have read the &lt;a href="http://yourserver.com/snapsecret/privacypolicy.html">Privacy Policy&lt;/a>.</string>
 
     <string-array name="camera_choices">
-        <item>Take Picture</item>
-        <item>Take Video</item>
-        <item>Choose Picture</item>
-        <item>Choose Video</item>
+        <item>Take a Picture</item>
+        <item>Select a Picture</item>
     </string-array>
     
     <string-array name="image_message_time">

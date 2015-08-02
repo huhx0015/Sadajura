@@ -17,14 +17,13 @@ import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseInstallation;
 import com.parse.ParseUser;
-import com.whomentors.sadajura.ui.view.CJUnbind;
+import com.whomentors.sadajura.ui.view.SJUnbind;
 import com.whomentors.sarajura.R;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /** -----------------------------------------------------------------------------------------------
  *  [SJLoginActivity] CLASS
- *  DEVELOPER: Michael Yoon Huh
  *  DESCRIPTION: An activity class that displays the login screen.
  *  -----------------------------------------------------------------------------------------------
  */
@@ -72,7 +71,7 @@ public class SJLoginActivity extends Activity {
 		super.onDestroy();
 
 		// Recycles all View objects to free up memory resources.
-		CJUnbind.recycleMemory(findViewById(R.id.sj_login_activity_layout), this);
+		SJUnbind.recycleMemory(findViewById(R.id.sj_login_activity_layout));
 	}
 
 	/** PHYSICAL BUTTON FUNCTIONALITY __________________________________________________________ **/

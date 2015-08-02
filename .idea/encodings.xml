@@ -29,12 +29,12 @@
     <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/logo_login.png" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/user_chat1.png" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/user_chat2.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/chat.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/chat_item.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/chat_item_rcv.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/chat_item_sent.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/login.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/register.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/sj_chat_activity.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/user_list.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/snap/src/main/res/values/color.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/snap/src/main/res/values/styles.xml" charset="UTF-8" />

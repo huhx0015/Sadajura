@@ -121,20 +121,6 @@
 
 
         <activity
-            android:name="com.whomentors.sadajura.chat.Login"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
-        </activity>
-
-        <activity
-            android:name="com.whomentors.sadajura.chat.Register"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
-        </activity>
-
-        <activity
             android:name="com.whomentors.sadajura.chat.UserList"
             android:label="@string/app_name"
             android:screenOrientation="portrait"

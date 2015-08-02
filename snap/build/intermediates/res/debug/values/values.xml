@@ -3,10 +3,8 @@
     <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="camera_choices">
-        <item>Take Picture</item>
-        <item>Take Video</item>
-        <item>Choose Picture</item>
-        <item>Choose Video</item>
+        <item>Take a Picture</item>
+        <item>Select a Picture</item>
     </string-array>
     <string-array name="camera_choices2">
         <item>Take Picture</item>
