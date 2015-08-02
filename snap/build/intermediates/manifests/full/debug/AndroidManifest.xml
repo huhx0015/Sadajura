@@ -160,6 +160,12 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
+        <activity
+            android:name="com.whomentors.sadajura.chat.SJChat"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
 
         <service android:name="com.parse.PushService" />
 

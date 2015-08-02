@@ -11,6 +11,7 @@ import com.parse.Parse;
 public class ChattApp extends Application
 {
 
+	/*
 	/* (non-Javadoc)
 	 * @see android.app.Application#onCreate()
 	 */
@@ -19,8 +20,9 @@ public class ChattApp extends Application
 	{
 		super.onCreate();
 
-		Parse.initialize(this, "aEK4rYnLSxU1AqvXc8Euil0Is8mklk7d4Y3YqC6i",
-				"dYguCg65IT3J2gX2JeFhhDcB25RBjdpceveS8UdU");
+		//Parse.initialize(this, "aEK4rYnLSxU1AqvXc8Euil0Is8mklk7d4Y3YqC6i",
+		//			"dYguCg65IT3J2gX2JeFhhDcB25RBjdpceveS8UdU");
 
 	}
+
 }

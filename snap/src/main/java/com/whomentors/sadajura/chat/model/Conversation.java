@@ -1,5 +1,6 @@
 package com.whomentors.sadajura.chat.model;
 
+import com.parse.ParseUser;
 import com.whomentors.sadajura.chat.UserList;
 
 import java.util.Date;
@@ -83,7 +84,7 @@ public class Conversation
 	 */
 	public boolean isSent()
 	{
-		return UserList.user.getUsername().equals(sender);
+		return ParseUser.getCurrentUser().getUsername().equals(sender);
 	}
 
 	/**
