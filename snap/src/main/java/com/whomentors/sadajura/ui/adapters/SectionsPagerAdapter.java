@@ -19,7 +19,9 @@ import com.whomentors.sarajura.R;
  * one of the sections/tabs/pages.
  */
 public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
-	
+
+	private int TAB_COUNT = 3;
+
 	protected Context mContext;
 
 	public SectionsPagerAdapter(Context context, FragmentManager fm) {
@@ -54,7 +56,11 @@ public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
 
 	@Override
 	public int getCount() {
-		return 4;
+		return TAB_COUNT;
+	}
+
+	public void setCount(int count) {
+		TAB_COUNT = count;
 	}
 
 	@Override

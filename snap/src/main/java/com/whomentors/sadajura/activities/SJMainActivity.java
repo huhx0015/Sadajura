@@ -29,6 +29,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+import com.whomentors.sadajura.chat.utils.Const;
 import com.whomentors.sadajura.data.ParseConstants;
 import com.whomentors.sadajura.ui.dialog.SJDialogBuilder;
 import com.whomentors.sadajura.ui.adapters.SectionsPagerAdapter;
@@ -54,6 +55,9 @@ public class SJMainActivity extends FragmentActivity implements ActionBar.TabLis
 
     // ACTIONBAR VARIABLES
     private ActionBar actionBar;
+
+    // ALERT VARIABLES
+    private Boolean isAlert = false;
 
     // LOGGING VARIABLES
 	public static final String LOG_TAG = SJMainActivity.class.getSimpleName();
@@ -84,6 +88,7 @@ public class SJMainActivity extends FragmentActivity implements ActionBar.TabLis
         setUpLayout(); // Sets up the layout for the activity.
         setUpActionBar(); // Sets up the action bar attributes.
         retrieveParseData(); // Retrieves the Parse data about the current user.
+        getIntentBundle(); // Retrieves the data from the Intent Bundle from the previous activity.
 		setUpPagerAdapter(); // Sets up the pager adapter for the activity.
 	}
 
@@ -122,7 +127,6 @@ public class SJMainActivity extends FragmentActivity implements ActionBar.TabLis
 				else {
 					mMediaUri = data.getData();
                 }
-
 			}
 
 			else {
@@ -403,6 +407,8 @@ public class SJMainActivity extends FragmentActivity implements ActionBar.TabLis
         // app.
         mSectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
 
+        if (isAlert) { mSectionsPagerAdapter.setCount(4); } // Displays the WISH LIST.
+
         // Sets up the ViewPager with the sections adapter.
         mainViewPager.setAdapter(mSectionsPagerAdapter);
 
@@ -468,6 +474,17 @@ public class SJMainActivity extends FragmentActivity implements ActionBar.TabLis
     }
 
     /** INTENT METHODS _________________________________________________________________________ **/
+
+    // getIntentBundle(): Retrieves the Bundle data from the previous activity.
+    private void getIntentBundle() {
+
+        Bundle extras = getIntent().getExtras();
+
+        // Tries to retrieve the additional information from the bundle.
+        if (extras != null) {
+            isAlert = getIntent().getExtras().getBoolean("SadajuraAlert");
+        }
+    }
 
     // launchLoginIntent(): Launches a Intent to return to the SJLoginActivity.
     private void launchLoginIntent() {
