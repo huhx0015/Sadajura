@@ -128,7 +128,14 @@
             android:parentActivityName="com.whomentors.sadajura.activities.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
-        
+
+        <activity
+            android:name="com.whomentors.sadajura.activities.MessageViewActivity"
+            android:parentActivityName="com.whomentors.sadajura.activities.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+
         <service android:name="com.parse.PushService" />
 		<receiver android:name="com.parse.ParseBroadcastReceiver">
   			<intent-filter>

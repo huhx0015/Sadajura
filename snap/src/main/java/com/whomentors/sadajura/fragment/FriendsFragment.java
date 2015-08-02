@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.whomentors.sadajura.activities.MessageViewActivity;
 import com.whomentors.sadajura.ui.FriendsAdapter;
 import com.whomentors.sadajura.ParseConstants;
 import com.developer.appname.android.R;
@@ -50,6 +51,7 @@ public class FriendsFragment extends ListFragment {
 	}
 	
 	private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+
 		  @Override
 		  public void onReceive(Context context, Intent intent) {
 		    
@@ -61,6 +63,7 @@ public class FriendsFragment extends ListFragment {
 	
 	@Override
 	public void onDestroy() {
+
 	  // Unregister since the activity is about to be closed.
 	  // This is somewhat like [[NSNotificationCenter defaultCenter] removeObserver:name:object:] 
 	  LocalBroadcastManager.getInstance(getActivity().getApplicationContext()).unregisterReceiver(mMessageReceiver);
@@ -115,14 +118,18 @@ public class FriendsFragment extends ListFragment {
 	public boolean isFragmentUIActive() {
 	    return isAdded() && isVisible() && !isDetached() && !isRemoving();
 	}
-	
+
+	// onListItemClick():  Defines the action to take when an friend item is clicked.
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
 		
 		final ParseUser friendPosition = mFriends.get(position);
-		
-		Intent intent = new Intent(getActivity(), ProfileViewActivity.class);
+
+		// TODO: Change action to display messenger view.
+
+		//Intent intent = new Intent(getActivity(), ProfileViewActivity.class);
+		Intent intent = new Intent(getActivity(), MessageViewActivity.class); // Loads the message view.
 		intent.putExtra("selectedUserObjectId", friendPosition.getObjectId());
 		intent.putExtra("selectedUsername", friendPosition.getUsername());
 		startActivity(intent);
