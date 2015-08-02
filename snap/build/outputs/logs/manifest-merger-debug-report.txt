@@ -317,10 +317,10 @@ action#android.intent.action.USER_PRESENT
 ADDED from AndroidManifest.xml:169:8
 	android:name
 		ADDED from AndroidManifest.xml:169:16
-receiver#com.whomentors.sadajura.MyCustomReceiver
+receiver#com.whomentors.sadajura.receiver.MyCustomReceiver
 ADDED from AndroidManifest.xml:172:3
 	android:exported
-		ADDED from AndroidManifest.xml:172:69
+		ADDED from AndroidManifest.xml:172:78
 	android:name
 		ADDED from AndroidManifest.xml:172:13
 intent-filter#com.whomentors.sadajura.UPDATE_MESSAGES+com.whomentors.sadajura.UPDATE_REQUESTS

@@ -1,4 +1,4 @@
-package com.whomentors.sadajura;
+package com.whomentors.sadajura.data;
 
 public final class ParseConstants {
 	// Class name

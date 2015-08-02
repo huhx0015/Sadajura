@@ -29,7 +29,7 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-import com.whomentors.sadajura.ParseConstants;
+import com.whomentors.sadajura.data.ParseConstants;
 import com.whomentors.sadajura.ui.QustomDialogBuilder;
 import com.parse.FindCallback;
 import com.parse.ParseException;

@@ -18,7 +18,7 @@ import android.widget.ListView;
 
 import com.whomentors.sadajura.chat.SJChat;
 import com.whomentors.sadajura.ui.FriendsAdapter;
-import com.whomentors.sadajura.ParseConstants;
+import com.whomentors.sadajura.data.ParseConstants;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;

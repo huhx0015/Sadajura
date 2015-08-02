@@ -1,4 +1,4 @@
-package com.whomentors.sadajura;
+package com.whomentors.sadajura.data;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

@@ -4,9 +4,16 @@ package com.whomentors.sadajura.chat;
  * Created by Michael Yoon Huh on 8/1/2015.
  */
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Environment;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.text.InputType;
 import android.text.format.DateUtils;
 import android.util.Log;
@@ -15,10 +22,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -26,29 +37,49 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.whomentors.sadajura.activities.RecipientsActivity;
 import com.whomentors.sadajura.chat.custom.CustomActivity;
 import com.whomentors.sadajura.chat.model.Conversation;
 import com.whomentors.sadajura.chat.utils.Const;
+import com.whomentors.sadajura.data.ParseConstants;
+import com.whomentors.sadajura.ui.QustomDialogBuilder;
 import com.whomentors.sarajura.R;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * The Class Chat is the Activity class that holds main chat screen. It shows
  * all the conversation messages between two users and also allows the user to
  * send and receive messages.
  */
-public class SJChat extends CustomActivity
-{
+public class SJChat extends CustomActivity {
 
     /** SJChat Additions **/
+
+    // CAMERA DIALOG VARIABLES:
+    public static final int TAKE_PHOTO_REQUEST = 0;
+    public static final int TAKE_VIDEO_REQUEST = 1;
+    public static final int PICK_PHOTO_REQUEST = 2;
+    public static final int PICK_VIDEO_REQUEST = 3;
+    public static final int AVIARY_EDIT_REQUEST = 4;
+    public static final int MEDIA_TYPE_IMAGE = 5;
+    public static final int MEDIA_TYPE_VIDEO = 6;
+    public static final int FILE_SIZE_LIMIT = 1024*1024*10; // 10 MB
+    protected Uri mMediaUri;
+    protected Uri mOutputUri;
 
     // LOGGING VARIABLES
     private static final String LOG_TAG = SJChat.class.getSimpleName();
 
-    /** The user. */
+    // PARSE VARIABLES
     public static ParseUser user;
 
     // getIntentBundle(): Retrieves the data from the previous activity.
@@ -65,7 +96,269 @@ public class SJChat extends CustomActivity
         }
     }
 
-    //
+    // setUpButton(): Set up the Button objects for the activity.
+    private void setUpButtons() {
+
+        ImageButton cameraButton = (ImageButton) findViewById(R.id.btnPicture);
+
+        // CAMERA BUTTON:
+        cameraButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                // TODO: Add the dialog popup for the Camera menu.
+
+                final QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(SJChat.this);
+
+                ListView cameraOptions = new ListView(SJChat.this);
+                cameraOptions.setBackgroundColor(Color.WHITE);
+                cameraOptions.setSelector(R.drawable.list_item_selector);
+
+                ArrayAdapter<String> modeAdapter = new ArrayAdapter<String>(SJChat.this, android.R.layout.simple_list_item_1,
+                        android.R.id.text1, getResources().getStringArray(R.array.camera_choices));
+
+                cameraOptions.setAdapter(modeAdapter);
+                qustomDialogBuilder.setView(cameraOptions);
+
+                final AlertDialog customDialog = qustomDialogBuilder.create();
+                customDialog.setCanceledOnTouchOutside(true);
+                customDialog.show();
+
+                cameraOptions.setOnItemClickListener(new AdapterView.OnItemClickListener()
+                {
+                    @Override
+                    public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3)
+                    {
+                        customDialog.cancel();
+
+                        switch(position) {
+                            case 0: // Take picture
+
+                                Intent takePhotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                                mMediaUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
+                                if (mMediaUri == null) {
+                                    // display an error
+                                    Toast.makeText(SJChat.this, R.string.error_external_storage,
+                                            Toast.LENGTH_LONG).show();
+                                }
+                                else {
+                                    takePhotoIntent.putExtra(MediaStore.EXTRA_OUTPUT, mMediaUri);
+                                    startActivityForResult(takePhotoIntent, TAKE_PHOTO_REQUEST);
+                                }
+                                break;
+                            case 1: // Take video
+                                Intent videoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+                                mMediaUri = getOutputMediaFileUri(MEDIA_TYPE_VIDEO);
+                                if (mMediaUri == null) {
+                                    // display an error
+                                    Toast.makeText(SJChat.this, R.string.error_external_storage,
+                                            Toast.LENGTH_LONG).show();
+                                }
+                                else {
+                                    videoIntent.putExtra(MediaStore.EXTRA_OUTPUT, mMediaUri);
+                                    videoIntent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 10);
+
+                                    String manufacturer = android.os.Build.MANUFACTURER;
+
+                                    if (manufacturer.equals("HTC") || manufacturer.equals("HTC Corporation"))
+                                    {
+                                        System.out.println("manufacturer = HTC");
+
+                                        videoIntent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 0); // 0 = lowest res
+                                    }
+                                    else
+                                    {
+                                        videoIntent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 0); // 0 = lowest res
+
+                                        final Toast tag = Toast.makeText(getBaseContext(), R.string.video_size_warning,Toast.LENGTH_SHORT);
+
+                                        tag.show();
+
+                                        new CountDownTimer(7000, 1000)
+                                        {
+                                            public void onTick(long millisUntilFinished) {tag.show();}
+                                            public void onFinish() {tag.show();}
+
+                                        }.start();
+
+                                        long maxVideoSize = 7*1024*1024; // 10 MB // 10491520L
+
+                                        videoIntent.putExtra(MediaStore.EXTRA_SIZE_LIMIT, maxVideoSize);
+                                    }
+
+                                    startActivityForResult(videoIntent, TAKE_VIDEO_REQUEST);
+                                }
+                                break;
+                            case 2: // Choose picture
+                                Intent choosePhotoIntent = new Intent(Intent.ACTION_GET_CONTENT);
+                                choosePhotoIntent.setType("image/*");
+                                startActivityForResult(choosePhotoIntent, PICK_PHOTO_REQUEST);
+                                break;
+                            case 3: // Choose video
+                                Intent chooseVideoIntent = new Intent(Intent.ACTION_GET_CONTENT);
+                                chooseVideoIntent.setType("video/*");
+                                Toast.makeText(SJChat.this, R.string.video_file_size_warning, Toast.LENGTH_LONG).show();
+                                startActivityForResult(chooseVideoIntent, PICK_VIDEO_REQUEST);
+                                break;
+                        }
+                    }
+
+                    private Uri getOutputMediaFileUri(int mediaType) {
+                        // To be safe, you should check that the SDCard is mounted
+                        // using Environment.getExternalStorageState() before doing this.
+                        if (isExternalStorageAvailable()) {
+                            // get the URI
+
+                            // 1. Get the external storage directory
+                            String appName = SJChat.this.getString(R.string.app_name);
+                            File mediaStorageDir = new File(
+                                    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+                                    appName);
+
+                            // 2. Create our subdirectory
+                            if (! mediaStorageDir.exists()) {
+                                if (! mediaStorageDir.mkdirs()) {
+                                    Log.e(LOG_TAG, "Failed to create directory.");
+                                    return null;
+                                }
+                            }
+
+                            // 3. Create a file name
+                            // 4. Create the file
+                            File mediaFile;
+                            Date now = new Date();
+
+                            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(now);
+
+                            String path = mediaStorageDir.getPath() + File.separator;
+                            if (mediaType == MEDIA_TYPE_IMAGE) {
+                                mediaFile = new File(path + "IMG_" + timestamp + ".jpg");
+                            }
+                            else if (mediaType == MEDIA_TYPE_VIDEO) {
+
+                                String manufacturer = android.os.Build.MANUFACTURER;
+
+                                if (manufacturer.equals("HTC") || manufacturer.equals("HTC Corporation"))
+                                {
+                                    System.out.println("manufacturer = HTC");
+
+                                    mediaFile = new File(path + "VID_" + timestamp + ".3gp");
+                                }
+                                else
+                                {
+                                    mediaFile = new File(path + "VID_" + timestamp + ".mp4");
+                                }
+                            }
+                            else {
+                                return null;
+                            }
+
+                            Log.d(LOG_TAG, "File: " + Uri.fromFile(mediaFile));
+
+                            // 5. Return the file's URI
+                            return Uri.fromFile(mediaFile);
+                        }
+                        else {
+                            return null;
+                        }
+                    }
+
+                    private boolean isExternalStorageAvailable() {
+                        String state = Environment.getExternalStorageState();
+
+                        if (state.equals(Environment.MEDIA_MOUNTED)) {
+                            return true;
+                        }
+                        else {
+                            return false;
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == PICK_PHOTO_REQUEST || requestCode == PICK_VIDEO_REQUEST) {
+                if (data == null) {
+                    Toast.makeText(this, getString(R.string.general_error), Toast.LENGTH_LONG).show();
+                }
+                else {
+                    mMediaUri = data.getData();
+                }
+
+                if (requestCode == PICK_VIDEO_REQUEST) {
+                    // make sure the file is less than 10 MB
+                    int fileSize = 0;
+                    InputStream inputStream = null;
+
+                    try {
+                        inputStream = getContentResolver().openInputStream(mMediaUri);
+                        fileSize = inputStream.available();
+                    }
+                    catch (FileNotFoundException e) {
+                        Toast.makeText(this, R.string.error_opening_file, Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    catch (IOException e) {
+                        Toast.makeText(this, R.string.error_opening_file, Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    finally {
+                        try {
+                            inputStream.close();
+                        } catch (IOException e) { /* Intentionally blank */ }
+                    }
+
+                    if (fileSize >= FILE_SIZE_LIMIT) {
+                        Toast.makeText(this, R.string.error_file_size_too_large, Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                }
+            }
+            else {
+                Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                mediaScanIntent.setData(mMediaUri);
+                sendBroadcast(mediaScanIntent);
+            }
+
+            if (requestCode == PICK_VIDEO_REQUEST || requestCode == TAKE_VIDEO_REQUEST) {
+
+                String fileType;
+                Intent recipientsIntent = new Intent(this, RecipientsActivity.class);
+                recipientsIntent.setData(mMediaUri);
+
+                fileType = ParseConstants.TYPE_VIDEO;
+
+                recipientsIntent.putExtra(ParseConstants.KEY_FILE_TYPE, fileType);
+                startActivity(recipientsIntent);
+            }
+
+            else if (requestCode == PICK_PHOTO_REQUEST || requestCode == TAKE_PHOTO_REQUEST)
+            {
+
+                Intent recipientsIntent = new Intent(getApplicationContext(), RecipientsActivity.class);
+                recipientsIntent.setData(mMediaUri);
+
+                String fileType = ParseConstants.TYPE_IMAGE;
+
+                recipientsIntent.putExtra(ParseConstants.KEY_FILE_TYPE, fileType);
+                startActivity(recipientsIntent);
+
+            }
+        }
+
+        else if (resultCode == RESULT_CANCELED) {
+
+        }
+    }
+
 
     //----------------------------------------------------------------------------------------------
     /** END ADDITIONS **/
@@ -124,6 +417,7 @@ public class SJChat extends CustomActivity
         Log.d(LOG_TAG, "onCreate(): Current selected ParseUser: " + user.getUsername());
 
         getIntentBundle(); // Retrieves the bundle from the previous activity.
+        setUpButtons(); // Sets up the listeners for the Button objects in the activity.
     }
 
     /* (non-Javadoc)

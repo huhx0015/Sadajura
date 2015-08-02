@@ -170,7 +170,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.whomentors.sadajura.MyCustomReceiver"
+            android:name="com.whomentors.sadajura.receiver.MyCustomReceiver"
             android:exported="false" >
             <intent-filter>
                 <action android:name="com.whomentors.sadajura.UPDATE_MESSAGES" />

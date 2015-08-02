@@ -1,4 +1,4 @@
-package com.whomentors.sadajura;
+package com.whomentors.sadajura.receiver;
 
 import java.util.Iterator;
 

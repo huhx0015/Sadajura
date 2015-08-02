@@ -25,7 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.whomentors.sadajura.ui.GraphicsUtil;
-import com.whomentors.sadajura.ParseConstants;
+import com.whomentors.sadajura.data.ParseConstants;
 import com.whomentors.sadajura.ui.QustomDialogBuilder;
 import com.parse.FindCallback;
 import com.parse.ParseException;

@@ -22,7 +22,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.whomentors.sadajura.ParseConstants;
+import com.whomentors.sadajura.data.ParseConstants;
 import com.whomentors.sadajura.ui.QustomDialogBuilder;
 import com.whomentors.sadajura.ui.RequestsAdapter;
 import com.parse.FindCallback;
