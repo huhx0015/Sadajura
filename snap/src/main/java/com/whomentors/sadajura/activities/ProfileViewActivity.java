@@ -30,7 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.whomentors.sadajura.data.ParseConstants;
-import com.whomentors.sadajura.ui.QustomDialogBuilder;
+import com.whomentors.sadajura.ui.CJDialogBuilder;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -443,8 +443,8 @@ public class ProfileViewActivity extends ListActivity {
 		
 		String requestMessage = "Send " + friendPosition.getUsername() + " a friend request so you can share YourAppName messages.";
 
-        QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(getListView().getContext());
-        qustomDialogBuilder.setMessage(requestMessage)
+        CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(getListView().getContext());
+        CJDialogBuilder.setMessage(requestMessage)
                 .setIcon(R.drawable.ic_profile)
                 .setTitle("Send Friend Request?")
                 .setTitleColor("#000000")
@@ -502,8 +502,8 @@ public class ProfileViewActivity extends ListActivity {
 					                }
 
 
-                                    QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(ProfileViewActivity.this);
-                                    qustomDialogBuilder.setMessage("Your request has been sent!")
+                                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(ProfileViewActivity.this);
+                                    CJDialogBuilder.setMessage("Your request has been sent!")
                                             .setIcon(R.drawable.ic_happy_face)
                                             .setTitle("Request Status!")
                                             .setTitleColor("#000000")
@@ -525,7 +525,7 @@ public class ProfileViewActivity extends ListActivity {
                                                 }
                                             });
 
-                                 AlertDialog customDialog = qustomDialogBuilder.create();
+                                 AlertDialog customDialog = CJDialogBuilder.create();
                                  customDialog.show();
 
                                  Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
@@ -556,15 +556,15 @@ public class ProfileViewActivity extends ListActivity {
 						    	 
 							     Log.e(TAG, e.getMessage());
 
-                                 QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(ProfileViewActivity.this);
-                                 qustomDialogBuilder.setMessage(e.getMessage())
+                                 CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(ProfileViewActivity.this);
+                                 CJDialogBuilder.setMessage(e.getMessage())
                                          .setIcon(R.drawable.ic_sad_face)
                                          .setTitle(getResources().getString(R.string.signup_error_title))
                                          .setTitleColor("#000000")
                                          .setDividerColor("#10f8b7")
                                          .setPositiveButton(android.R.string.ok, null);
 
-                                 AlertDialog customDialog = qustomDialogBuilder.create();
+                                 AlertDialog customDialog = CJDialogBuilder.create();
                                  customDialog.show();
 
                                  Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
@@ -578,7 +578,7 @@ public class ProfileViewActivity extends ListActivity {
 					}
 			  });
 
-        AlertDialog customDialog = qustomDialogBuilder.create();
+        AlertDialog customDialog = CJDialogBuilder.create();
         customDialog.show();
 
         Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);

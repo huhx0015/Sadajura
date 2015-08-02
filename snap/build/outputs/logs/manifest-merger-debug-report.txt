@@ -97,7 +97,7 @@ MERGED from com.android.support:cardview-v7:22.2.1:22:5
 		ADDED from AndroidManifest.xml:35:9
 	android:name
 		ADDED from AndroidManifest.xml:27:9
-activity#com.whomentors.sadajura.activities.MainActivity
+activity#com.whomentors.sadajura.activities.CJMainActivity
 ADDED from AndroidManifest.xml:37:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:40:13
@@ -115,7 +115,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:43:5
 	android:name
 		ADDED from AndroidManifest.xml:43:15
-activity#com.whomentors.sadajura.activities.LoginActivity
+activity#com.whomentors.sadajura.activities.CJLoginActivity
 ADDED from AndroidManifest.xml:46:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:49:13
@@ -123,7 +123,7 @@ ADDED from AndroidManifest.xml:46:9
 		ADDED from AndroidManifest.xml:48:13
 	android:name
 		ADDED from AndroidManifest.xml:47:13
-activity#com.whomentors.sadajura.activities.PasswordResetActivity
+activity#com.whomentors.sadajura.activities.CJPasswordResetActivity
 ADDED from AndroidManifest.xml:51:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:55:13

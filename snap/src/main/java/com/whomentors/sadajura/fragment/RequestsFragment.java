@@ -23,7 +23,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.whomentors.sadajura.data.ParseConstants;
-import com.whomentors.sadajura.ui.QustomDialogBuilder;
+import com.whomentors.sadajura.ui.CJDialogBuilder;
 import com.whomentors.sadajura.ui.RequestsAdapter;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -147,8 +147,8 @@ public class RequestsFragment extends ListFragment {
 		
 		String requestMessage = "Add " + request.getString(ParseConstants.KEY_SENDER_NAME) + " as a confirmed friend to share YourAppName messages.";
 
-        QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(getListView().getContext());
-        qustomDialogBuilder.setMessage(requestMessage)
+        CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(getListView().getContext());
+        CJDialogBuilder.setMessage(requestMessage)
             .setIcon(R.drawable.ic_profile)
 			.setTitle("Add Friend?")
             .setTitleColor("#000000")
@@ -195,8 +195,8 @@ public class RequestsFragment extends ListFragment {
                                     e1.printStackTrace();
                                 }
 
-                                QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(getListView().getContext());
-                                qustomDialogBuilder.setMessage("You can now send and receive YourAppName messages with " + request.getString(ParseConstants.KEY_SENDER_NAME) + ".")
+                                CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(getListView().getContext());
+                                CJDialogBuilder.setMessage("You can now send and receive YourAppName messages with " + request.getString(ParseConstants.KEY_SENDER_NAME) + ".")
                                         .setIcon(R.drawable.ic_happy_face)
                                         .setTitle("Add Friend?")
                                         .setTitleColor("#000000")
@@ -218,7 +218,7 @@ public class RequestsFragment extends ListFragment {
                                             }
                                         });
 
-                                AlertDialog customDialog = qustomDialogBuilder.create();
+                                AlertDialog customDialog = CJDialogBuilder.create();
                                 customDialog.show();
 
                                 Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
@@ -248,7 +248,7 @@ public class RequestsFragment extends ListFragment {
                 }
             });
 
-        AlertDialog customDialog = qustomDialogBuilder.create();
+        AlertDialog customDialog = CJDialogBuilder.create();
         customDialog.show();
 
         Button negativeBtn = customDialog.getButton(DialogInterface.BUTTON_NEGATIVE);

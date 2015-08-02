@@ -24,9 +24,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.whomentors.sadajura.ui.GraphicsUtil;
+import com.whomentors.sadajura.ui.graphics.GraphicsUtil;
 import com.whomentors.sadajura.data.ParseConstants;
-import com.whomentors.sadajura.ui.QustomDialogBuilder;
+import com.whomentors.sadajura.ui.CJDialogBuilder;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -82,7 +82,7 @@ public class SettingsActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                final QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(SettingsActivity.this);
+                final CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(SettingsActivity.this);
 
                 ListView cameraOptions = new ListView(SettingsActivity.this);
                 cameraOptions.setBackgroundColor(Color.WHITE);
@@ -92,9 +92,9 @@ public class SettingsActivity extends Activity {
                         android.R.id.text1, getResources().getStringArray(R.array.camera_choices2));
 
                 cameraOptions.setAdapter(modeAdapter);
-                qustomDialogBuilder.setView(cameraOptions);
+                CJDialogBuilder.setView(cameraOptions);
 
-                final AlertDialog customDialog = qustomDialogBuilder.create();
+                final AlertDialog customDialog = CJDialogBuilder.create();
                 customDialog.setCanceledOnTouchOutside(true);
                 customDialog.show();
 
@@ -160,8 +160,8 @@ public class SettingsActivity extends Activity {
                 {
                     String requestMessage = "This will delete all saved/non self destructing YourAppName messages. Don't worry we wont delete any self destructing YourAppName messages you have not viewed yet.";
 
-                    QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(SettingsActivity.this);
-                    qustomDialogBuilder.setMessage(requestMessage)
+                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(SettingsActivity.this);
+                    CJDialogBuilder.setMessage(requestMessage)
                             .setIcon(R.drawable.ic_happy_face)
                             .setTitle("Clear My Messages?")
                             .setTitleColor("#000000")
@@ -219,7 +219,7 @@ public class SettingsActivity extends Activity {
                                 }
                             });
 
-                    AlertDialog customDialog = qustomDialogBuilder.create();
+                    AlertDialog customDialog = CJDialogBuilder.create();
                     customDialog.show();
 
                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);

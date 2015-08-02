@@ -10,7 +10,7 @@
         android:layout_height="match_parent" >
             
     <EditText
-        android:id="@+id/usernameField"
+        android:id="@+id/cj_username_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:singleLine="true"
@@ -33,7 +33,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp"
-        android:layout_below="@+id/usernameField"
+        android:layout_below="@+id/cj_username_field"
         android:text="Please enter a new username to be associated with your YourAppName account."
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"

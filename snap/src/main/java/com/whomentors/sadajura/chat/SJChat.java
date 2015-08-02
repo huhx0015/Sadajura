@@ -37,7 +37,7 @@ import com.whomentors.sadajura.chat.custom.CustomActivity;
 import com.whomentors.sadajura.chat.model.Conversation;
 import com.whomentors.sadajura.chat.utils.Const;
 import com.whomentors.sadajura.data.ParseConstants;
-import com.whomentors.sadajura.ui.QustomDialogBuilder;
+import com.whomentors.sadajura.ui.CJDialogBuilder;
 import com.whomentors.sarajura.R;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -106,7 +106,7 @@ public class SJChat extends CustomActivity {
 
                 // TODO: Add the dialog popup for the Camera menu.
 
-                final QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(SJChat.this);
+                final CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(SJChat.this);
 
                 ListView cameraOptions = new ListView(SJChat.this);
                 cameraOptions.setBackgroundColor(Color.WHITE);
@@ -116,9 +116,9 @@ public class SJChat extends CustomActivity {
                         android.R.id.text1, getResources().getStringArray(R.array.camera_choices));
 
                 cameraOptions.setAdapter(modeAdapter);
-                qustomDialogBuilder.setView(cameraOptions);
+                CJDialogBuilder.setView(cameraOptions);
 
-                final AlertDialog customDialog = qustomDialogBuilder.create();
+                final AlertDialog customDialog = CJDialogBuilder.create();
                 customDialog.setCanceledOnTouchOutside(true);
                 customDialog.show();
 

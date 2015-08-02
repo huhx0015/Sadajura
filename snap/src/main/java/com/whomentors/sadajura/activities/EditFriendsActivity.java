@@ -30,7 +30,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.whomentors.sadajura.data.ParseConstants;
-import com.whomentors.sadajura.ui.QustomDialogBuilder;
+import com.whomentors.sadajura.ui.CJDialogBuilder;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -290,15 +290,15 @@ public class EditFriendsActivity extends ListActivity {
 				}
 				else {
 					
-		            QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(EditFriendsActivity.this);
-                    qustomDialogBuilder.setMessage(e.getMessage())
+		            CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(EditFriendsActivity.this);
+                    CJDialogBuilder.setMessage(e.getMessage())
                             .setIcon(R.drawable.ic_sad_face)
                             .setTitle(getResources().getString(R.string.signup_error_title))
                             .setTitleColor("#000000")
                             .setDividerColor("#10f8b7")
                             .setPositiveButton(android.R.string.ok, null);
 
-                    AlertDialog customDialog = qustomDialogBuilder.create();
+                    AlertDialog customDialog = CJDialogBuilder.create();
                     customDialog.show();
 
                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);

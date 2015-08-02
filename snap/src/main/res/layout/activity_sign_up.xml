@@ -12,7 +12,7 @@
         android:layout_height="match_parent" >
             
     <EditText
-        android:id="@+id/usernameField"
+        android:id="@+id/cj_username_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:singleLine="true"
@@ -29,13 +29,13 @@
         android:background="@drawable/edittext" />
 
     <EditText
-        android:id="@+id/passwordField"
+        android:id="@+id/cj_password_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:lines="1"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/usernameField"
+        android:layout_below="@+id/cj_username_field"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp"
@@ -52,7 +52,7 @@
         android:singleLine="true"
         android:lines="1"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/passwordField"
+        android:layout_below="@+id/cj_password_field"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp"
@@ -76,7 +76,7 @@
         android:textSize="14sp" />
 
     <Button
-		android:id="@+id/signupbtn"
+		android:id="@+id/cj_signup_btn"
 	    android:layout_width="fill_parent"
 	    android:layout_height="52dp"
 	    android:layout_below="@+id/termsPrivacyTextView"

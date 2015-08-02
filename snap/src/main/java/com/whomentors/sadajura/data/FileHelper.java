@@ -13,7 +13,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.util.Log;
 
-import com.whomentors.sadajura.ui.ImageResizer;
+import com.whomentors.sadajura.ui.graphics.ImageResizer;
 
 public class FileHelper {
 	

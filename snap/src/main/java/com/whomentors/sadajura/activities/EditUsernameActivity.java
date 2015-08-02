@@ -15,7 +15,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.whomentors.sadajura.ui.QustomDialogBuilder;
+import com.whomentors.sadajura.ui.CJDialogBuilder;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
@@ -34,7 +34,7 @@ public class EditUsernameActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.activity_edit_username);
 
-		mUsername = (EditText)findViewById(R.id.usernameField);
+		mUsername = (EditText)findViewById(R.id.cj_username_field);
 		mSaveBtn = (Button)findViewById(R.id.savebtn);
 		
 		final ParseUser currentUser = ParseUser.getCurrentUser();
@@ -62,15 +62,15 @@ public class EditUsernameActivity extends Activity {
 				
 				if (username.isEmpty()) {
 
-                    QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(EditUsernameActivity.this);
-                    qustomDialogBuilder.setMessage(R.string.edit_username_error_message)
+                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(EditUsernameActivity.this);
+                    CJDialogBuilder.setMessage(R.string.edit_username_error_message)
                             .setIcon(R.drawable.ic_sad_face)
                             .setTitle(getResources().getString(R.string.signup_error_title))
                             .setTitleColor("#000000")
                             .setDividerColor("#10f8b7")
                             .setPositiveButton(android.R.string.ok, null);
 
-                    AlertDialog customDialog = qustomDialogBuilder.create();
+                    AlertDialog customDialog = CJDialogBuilder.create();
                     customDialog.show();
 
                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
@@ -79,15 +79,15 @@ public class EditUsernameActivity extends Activity {
 				}
 				else if (username.startsWith("1") || username.startsWith("2") || username.startsWith("3") || username.startsWith("4") || username.startsWith("5") || username.startsWith("6") || username.startsWith("7") || username.startsWith("8") || username.startsWith("9") || username.startsWith("0"))
 			    {
-                    QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(EditUsernameActivity.this);
-                    qustomDialogBuilder.setMessage("The username must not start with a number! Please try again by entering a username starting with a letter.")
+                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(EditUsernameActivity.this);
+                    CJDialogBuilder.setMessage("The username must not start with a number! Please try again by entering a username starting with a letter.")
                             .setIcon(R.drawable.ic_sad_face)
                             .setTitle(getResources().getString(R.string.signup_error_title))
                             .setTitleColor("#000000")
                             .setDividerColor("#10f8b7")
                             .setPositiveButton(android.R.string.ok, null);
 
-                    AlertDialog customDialog = qustomDialogBuilder.create();
+                    AlertDialog customDialog = CJDialogBuilder.create();
                     customDialog.show();
 
                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
@@ -96,15 +96,15 @@ public class EditUsernameActivity extends Activity {
 				}
 				else if (found)
 				{
-                    QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(EditUsernameActivity.this);
-                    qustomDialogBuilder.setMessage("The username must not contain any spaces! Please try again by entering a username without spaces.")
+                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(EditUsernameActivity.this);
+                    CJDialogBuilder.setMessage("The username must not contain any spaces! Please try again by entering a username without spaces.")
                             .setIcon(R.drawable.ic_sad_face)
                             .setTitle(getResources().getString(R.string.signup_error_title))
                             .setTitleColor("#000000")
                             .setDividerColor("#10f8b7")
                             .setPositiveButton(android.R.string.ok, null);
 
-                    AlertDialog customDialog = qustomDialogBuilder.create();
+                    AlertDialog customDialog = CJDialogBuilder.create();
                     customDialog.show();
 
                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
@@ -144,15 +144,15 @@ public class EditUsernameActivity extends Activity {
                                     Log.i(TAG, currentUser.getUsername());
 
 
-                                    QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(EditUsernameActivity.this);
-                                    qustomDialogBuilder.setMessage(e.getMessage())
+                                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(EditUsernameActivity.this);
+                                    CJDialogBuilder.setMessage(e.getMessage())
                                             .setIcon(R.drawable.ic_sad_face)
                                             .setTitle(getResources().getString(R.string.signup_error_title))
                                             .setTitleColor("#000000")
                                             .setDividerColor("#10f8b7")
                                             .setPositiveButton(android.R.string.ok, null);
 
-                                    AlertDialog customDialog = qustomDialogBuilder.create();
+                                    AlertDialog customDialog = CJDialogBuilder.create();
                                     customDialog.show();
 
                                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);

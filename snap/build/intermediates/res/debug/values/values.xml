@@ -412,8 +412,8 @@
     <string name="forgot_my_pwd">I’ve forgotten my password?</string>
     <string name="general_error">Sorry, there was an error!</string>
     <string name="log_in">Log in</string>
-    <string name="login_error_message">Please make sure you enter a username and password!</string>
-    <string name="login_error_title">Oops!</string>
+    <string name="login_error_message">Please input a valid username and password.</string>
+    <string name="login_error_title">Login Error</string>
     <string name="login_text">Login</string>
     <string name="menu_add_label">Add</string>
     <string name="menu_camera_label">Camera</string>
