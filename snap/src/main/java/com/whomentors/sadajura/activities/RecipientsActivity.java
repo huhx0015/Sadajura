@@ -32,7 +32,6 @@ import android.widget.Toast;
 import com.whomentors.sadajura.FileHelper;
 import com.whomentors.sadajura.ParseConstants;
 import com.whomentors.sadajura.ui.QustomDialogBuilder;
-import com.developer.appname.android.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -44,6 +43,7 @@ import com.parse.ParseUser;
 import com.parse.ParsePush;
 import com.parse.SaveCallback;
 import com.squareup.picasso.Picasso;
+import com.whomentors.sarajura.R;
 
 public class RecipientsActivity extends ListActivity {
 

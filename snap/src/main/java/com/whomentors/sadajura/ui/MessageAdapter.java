@@ -15,12 +15,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.whomentors.sadajura.ParseConstants;
-import com.developer.appname.android.R;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.squareup.picasso.Picasso;
+import com.whomentors.sarajura.R;
 
 public class MessageAdapter extends ArrayAdapter<ParseObject> {
 	

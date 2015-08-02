@@ -31,7 +31,6 @@ import android.widget.TextView;
 
 import com.whomentors.sadajura.ParseConstants;
 import com.whomentors.sadajura.ui.QustomDialogBuilder;
-import com.developer.appname.android.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -41,6 +40,7 @@ import com.parse.ParseQuery;
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.squareup.picasso.Picasso;
+import com.whomentors.sarajura.R;
 
 public class EditFriendsActivity extends ListActivity {
 	

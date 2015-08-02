@@ -9,7 +9,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.developer.appname.android.R;
+import com.whomentors.sarajura.R;
+
 
 public class QustomDialogBuilder extends AlertDialog.Builder {
 

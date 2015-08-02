@@ -17,11 +17,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.whomentors.sadajura.ui.QustomDialogBuilder;
-import com.developer.appname.android.R;
 import com.parse.ParseException;
 import com.parse.ParseInstallation;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
+import com.whomentors.sarajura.R;
 
 public class SignUpActivity extends Activity {
 	

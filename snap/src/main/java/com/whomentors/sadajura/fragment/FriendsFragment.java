@@ -19,13 +19,13 @@ import android.widget.ListView;
 import com.whomentors.sadajura.activities.MessageViewActivity;
 import com.whomentors.sadajura.ui.FriendsAdapter;
 import com.whomentors.sadajura.ParseConstants;
-import com.developer.appname.android.R;
 import com.whomentors.sadajura.activities.ProfileViewActivity;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
+import com.whomentors.sarajura.R;
 
 public class FriendsFragment extends ListFragment {
 	

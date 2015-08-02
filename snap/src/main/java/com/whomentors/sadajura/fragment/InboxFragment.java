@@ -19,7 +19,6 @@ import android.widget.ListView;
 
 import com.whomentors.sadajura.ui.MessageAdapter;
 import com.whomentors.sadajura.ParseConstants;
-import com.developer.appname.android.R;
 import com.whomentors.sadajura.activities.ViewImageActivity;
 import com.whomentors.sadajura.activities.ViewVideoActivity;
 import com.parse.FindCallback;
@@ -29,6 +28,7 @@ import com.parse.ParseObject;
 import com.parse.ParsePush;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.whomentors.sarajura.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

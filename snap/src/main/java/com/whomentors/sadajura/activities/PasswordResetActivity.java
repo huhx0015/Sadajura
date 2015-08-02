@@ -13,10 +13,10 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.whomentors.sadajura.ui.QustomDialogBuilder;
-import com.developer.appname.android.R;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.RequestPasswordResetCallback;
+import com.whomentors.sarajura.R;
 
 public class PasswordResetActivity extends Activity {
 	

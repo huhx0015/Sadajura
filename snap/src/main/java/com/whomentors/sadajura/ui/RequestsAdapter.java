@@ -13,11 +13,11 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.whomentors.sadajura.ParseConstants;
-import com.developer.appname.android.R;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
 import com.parse.ParseObject;
 import com.squareup.picasso.Picasso;
+import com.whomentors.sarajura.R;
 
 public class RequestsAdapter extends ArrayAdapter<ParseObject> {
 	

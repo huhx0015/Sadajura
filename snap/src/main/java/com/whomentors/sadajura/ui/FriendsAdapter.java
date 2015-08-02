@@ -7,12 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import com.developer.appname.android.R;
 import com.whomentors.sadajura.fragment.FriendsFragment;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
 import com.parse.ParseUser;
 import com.squareup.picasso.Picasso;
+import com.whomentors.sarajura.R;
 
 public class FriendsAdapter extends ArrayAdapter<ParseUser> {
 	

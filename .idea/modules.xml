@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Sadajura.iml" filepath="$PROJECT_DIR$/Sadajura.iml" />
-      <module fileurl="file://$PROJECT_DIR$/snap/mobile.iml" filepath="$PROJECT_DIR$/snap/mobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat/chat.iml" filepath="$PROJECT_DIR$/chat/chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snap/snap.iml" filepath="$PROJECT_DIR$/snap/snap.iml" />
     </modules>
   </component>
 </project>

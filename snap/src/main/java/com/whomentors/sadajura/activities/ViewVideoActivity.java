@@ -12,9 +12,9 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.developer.appname.android.R;
 import com.whomentors.sadajura.ui.TextureVideoView;
 import com.whomentors.sadajura.ui.TextureVideoView.MediaPlayerListener;
+import com.whomentors.sarajura.R;
 
 public class ViewVideoActivity extends Activity {
 	

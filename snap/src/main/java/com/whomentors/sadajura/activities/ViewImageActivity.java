@@ -11,9 +11,9 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.developer.appname.android.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
+import com.whomentors.sarajura.R;
 
 public class ViewImageActivity extends Activity {
 

@@ -8,10 +8,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.developer.appname.android.R;
 import com.whomentors.sadajura.fragment.FriendsFragment;
 import com.whomentors.sadajura.fragment.InboxFragment;
 import com.whomentors.sadajura.fragment.RequestsFragment;
+import com.whomentors.sarajura.R;
 
 /**
  * A {@link FragmentPagerAdapter} that returns a fragment corresponding to

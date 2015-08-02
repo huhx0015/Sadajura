@@ -44,12 +44,12 @@ import android.widget.Toast;
 
 import com.whomentors.sadajura.ParseConstants;
 import com.whomentors.sadajura.ui.QustomDialogBuilder;
-import com.developer.appname.android.R;
 import com.whomentors.sadajura.ui.SectionsPagerAdapter;
 import com.parse.ParseAnalytics;
 import com.parse.ParseInstallation;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
+import com.whomentors.sarajura.R;
 
 public class MainActivity extends FragmentActivity implements
 		ActionBar.TabListener {

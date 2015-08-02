@@ -5,7 +5,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
-import com.developer.appname.android.R;
+import com.whomentors.sarajura.R;
+
 
 public class WebViewActivity extends Activity {
 	
