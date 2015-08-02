@@ -5,7 +5,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;
@@ -378,14 +377,6 @@ public class SJMainActivity extends FragmentActivity implements ActionBar.TabLis
 
     /** LAYOUT METHODS _________________________________________________________________________ **/
 
-    // launchLoginIntent(): Launches a Intent to return to the SJLoginActivity.
-    private void launchLoginIntent() {
-        Intent intent = new Intent(this, SJLoginActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent);
-    }
-
     // setUpLayout(): Sets up the layout for the activity.
     private void setUpLayout() {
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
@@ -474,5 +465,15 @@ public class SJMainActivity extends FragmentActivity implements ActionBar.TabLis
             ParseAnalytics.trackAppOpened(getIntent());
             Log.i(LOG_TAG, currentUser.getUsername());
         }
+    }
+
+    /** INTENT METHODS _________________________________________________________________________ **/
+
+    // launchLoginIntent(): Launches a Intent to return to the SJLoginActivity.
+    private void launchLoginIntent() {
+        Intent intent = new Intent(this, SJLoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 }

@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.whomentors.sadajura.data.CJWishListModel;
-import com.whomentors.sadajura.ui.recyclerview.CJListAdapter;
+import com.whomentors.sadajura.ui.recyclerview.SJListAdapter;
 import com.whomentors.sarajura.R;
 import java.util.ArrayList;
 import butterknife.Bind;
@@ -96,7 +96,7 @@ public class WishListFragment extends Fragment {
 
     // setListAdapter(): Sets the recycler list adapter based on the artistList.
     private void setListAdapter(ArrayList<CJWishListModel> wishList){
-        CJListAdapter adapter = new CJListAdapter(wishList, true, currentActivity);
+        SJListAdapter adapter = new SJListAdapter(wishList, true, currentActivity);
         wishListView.setAdapter(adapter);
     }
 
