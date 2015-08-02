@@ -46,6 +46,11 @@
     <color name="background_floating_material_light">#ffeeeeee</color>
     <color name="background_material_dark">#ff303030</color>
     <color name="background_material_light">#ffeeeeee</color>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="black">#000000</color>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -73,6 +78,9 @@
     <color name="fab_stroke_end_outer_color">#0F000000</color>
     <color name="fab_stroke_top_inner_color">#1AFFFFFF</color>
     <color name="fab_stroke_top_outer_color">#2EFFFFFF</color>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="gray_light">#e8e8e8</color>
     <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
@@ -81,6 +89,14 @@
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
     <color name="link_text_material_dark">@color/material_deep_teal_200</color>
     <color name="link_text_material_light">@color/material_deep_teal_500</color>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="main_color_gray">#7d7d7d</color>
+    <color name="main_color_gray_dk">#3b3b3b</color>
+    <color name="main_color_gray_lt">#acacac</color>
+    <color name="main_color_green">#00b863</color>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -112,6 +128,11 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_smoke">#F7F7F7</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
@@ -152,6 +173,8 @@
     <declare-styleable name="Toolbar"><attr format="reference" name="titleTextAppearance"/><attr format="reference" name="subtitleTextAppearance"/><attr name="title"/><attr name="subtitle"/><attr name="android:gravity"/><attr format="dimension" name="titleMargins"/><attr format="dimension" name="titleMarginStart"/><attr format="dimension" name="titleMarginEnd"/><attr format="dimension" name="titleMarginTop"/><attr format="dimension" name="titleMarginBottom"/><attr name="contentInsetStart"/><attr name="contentInsetEnd"/><attr name="contentInsetLeft"/><attr name="contentInsetRight"/><attr format="dimension" name="maxButtonHeight"/><attr format="reference" name="collapseIcon"/><attr format="string" name="collapseContentDescription"/><attr name="popupTheme"/><attr format="reference" name="navigationIcon"/><attr format="string" name="navigationContentDescription"/><attr name="android:minHeight"/></declare-styleable>
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/><attr format="color" name="backgroundTint"/><attr name="backgroundTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
+    <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
     <dimen name="abc_action_bar_default_padding_material">4dp</dimen>
@@ -260,6 +283,15 @@
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="pad_10dp">10dp</dimen>
+    <dimen name="pad_15dp">15dp</dimen>
+    <dimen name="pad_20dp">20dp</dimen>
+    <dimen name="pad_30dp">30dp</dimen>
+    <dimen name="pad_5dp">5dp</dimen>
+    <dimen name="pad_chat_item">45dp</dimen>
+    <dimen name="pad_chat_item1">10dp</dimen>
     <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/design/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="snackbar_action_inline_max_width">128dp</dimen>
@@ -277,6 +309,14 @@
     <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="text_view_vertical_height">30dp</dimen>
+    <dimen name="txt_12sp">12sp</dimen>
+    <dimen name="txt_13sp">13sp</dimen>
+    <dimen name="txt_14sp">14sp</dimen>
+    <dimen name="txt_15sp">15sp</dimen>
+    <dimen name="txt_16sp">16sp</dimen>
+    <dimen name="txt_18sp">18sp</dimen>
+    <dimen name="txt_20sp">20sp</dimen>
+    <dimen name="txt_7sp">7sp</dimen>
     <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
@@ -329,6 +369,9 @@
     <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
+    <string name="alert_loading">Loading...</string>
+    <string name="alert_wait">Please wait...</string>
+    <string name="all_chats">All Chats</string>
     <string name="already_requested">Oops! Looks like there is already a friend request pending or your already friends.</string>
     <string name="app_name">Sadajura</string>
     <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/design/22.2.1/res/values/values.xml -->
@@ -337,21 +380,31 @@
     <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="create_account_text">Sign Up</string>
+    <string name="drawer_close">Close</string>
+    <string name="drawer_open">Open</string>
+    <string name="edit">Edit</string>
     <string name="edit_email_error_message">Make sure you enter a valid email address!</string>
     <string name="edit_username_error_message">Make sure you enter a username!</string>
+    <string name="email">Email</string>
     <string name="email_hint">Email</string>
     <string name="email_password_hint">Email Address</string>
     <string name="empty_friends_label">Tap above to add some friends.</string>
     <string name="empty_inbox_label">No new messages!</string>
     <string name="empty_recipients_list_message">Try adding some friends first!</string>
     <string name="empty_requests_label">No new requests!</string>
+    <string name="err_fields_empty">Please fill all the fields.</string>
+    <string name="err_login">Error occurred while login:</string>
+    <string name="err_singup">Error occurred while signup:</string>
+    <string name="err_users">Error occurred while finding users:</string>
     <string name="error_external_storage">There was a problem accessing your device\'s external storage.</string>
     <string name="error_file_size_too_large">The selected file is too large! Select a new file.</string>
     <string name="error_opening_file">There was a problem with the selected file.</string>
     <string name="error_selecting_file">There was an error with the file selected. Please select a different file.</string>
     <string name="error_selecting_file_title">We\'re sorry!</string>
     <string name="error_sending_message">There was an error sending your message. Please try again.</string>
+    <string name="forgot_my_pwd">I’ve forgotten my password?</string>
     <string name="general_error">Sorry, there was an error!</string>
+    <string name="log_in">Log in</string>
     <string name="login_error_message">Please make sure you enter a username and password!</string>
     <string name="login_error_title">Oops!</string>
     <string name="login_text">Login</string>
@@ -365,9 +418,16 @@
     <string name="menu_send_label">Send</string>
     <string name="menu_settings_label">Settings</string>
     <string name="menu_share_label">Share</string>
+    <string name="msg_no_user_found">No users found for chat!</string>
+    <string name="my_chats">My Chats</string>
+    <string name="new_chat">New Chat</string>
+    <string name="or">or</string>
+    <string name="password">Password</string>
     <string name="password_hint">Password</string>
     <string name="password_reset_error_message">Make sure you enter a valid email address!</string>
+    <string name="register">Register</string>
     <string name="reset_text">Forgot your password?</string>
+    <string name="search">Search</string>
     <string name="signup_error_message">Please make sure you enter a username, password and email address!</string>
     <string name="signup_error_title">Oops!</string>
     <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
@@ -391,6 +451,9 @@
     <string name="title_section1">Messages</string>
     <string name="title_section2">Requests</string>
     <string name="title_section3">Friends</string>
+    <string name="to">To:</string>
+    <string name="type_msg">Type message</string>
+    <string name="username">Username</string>
     <string name="username_hint">Username</string>
     <string name="video_file_size_warning">The selected video must be less than 10 MB.</string>
     <string name="video_size_limit_warning">The selected video must be less than 10 MB.</string>
@@ -419,6 +482,15 @@
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:homeAsUpIndicator">@drawable/back_arrow</item>
+    </style>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
+    <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -1804,5 +1876,54 @@
     <style name="Widget.Design.TextInputLayout" parent="android:Widget">
         <item name="hintTextAppearance">@style/TextAppearance.Design.Hint</item>
         <item name="errorTextAppearance">@style/TextAppearance.Design.Error</item>
+    </style>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="btn" parent="android:Widget.Holo.Light.Button">
+        <item name="android:minHeight">1dp</item>
+        <item name="android:minWidth">1dp</item>
+    </style>
+    <style name="btn_green_white_bg" parent="@style/btn">
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingBottom">@dimen/pad_10dp</item>
+        <item name="android:paddingRight">@dimen/pad_15dp</item>
+        <item name="android:paddingTop">@dimen/pad_10dp</item>
+        <item name="android:textColor">@color/main_color_green</item>
+        <item name="android:textSize">@dimen/txt_16sp</item>
+    </style>
+    <style name="btn_white_large" parent="@style/btn">
+          <item name="android:background">@drawable/green_btn</item>
+          <item name="android:textColor">@color/white</item>
+          <item name="android:textSize">@dimen/txt_18sp</item>
+     </style>
+    <style name="editext_graybg" parent="android:Widget.EditText">
+          <item name="android:background">@drawable/editext_bg_gray</item>
+          <item name="android:drawablePadding">@dimen/pad_10dp</item>
+          <item name="android:ems">10</item>
+          <item name="android:inputType">textEmailAddress</item>
+          <item name="android:paddingLeft">@dimen/pad_10dp</item>
+          <item name="android:paddingRight">@dimen/pad_10dp</item>
+          <item name="android:textSize">@dimen/txt_16sp</item>
+     </style>
+    <style name="editext_white" parent="android:Widget.Holo.Light.EditText">
+        <item name="android:background">@color/white</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:paddingBottom">@dimen/pad_10dp</item>
+        <item name="android:paddingTop">@dimen/pad_10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/txt_14sp</item>
+    </style>
+    <style name="edittext_msg" parent="android:Widget.Holo.Light.EditText">
+        <item name="android:background">@drawable/edittext_bg</item>
+        <item name="android:ems">10</item>
+        <item name="android:imeActionId">100</item>
+        <item name="android:imeOptions">actionSend</item>
+        <item name="android:inputType">text</item>
+        <item name="android:layout_marginLeft">@dimen/pad_5dp</item>
+        <item name="android:layout_marginRight">@dimen/pad_5dp</item>
+        <item name="android:paddingLeft">@dimen/pad_5dp</item>
+        <item name="android:paddingRight">@dimen/pad_5dp</item>
+        <item name="android:textColorHint">@color/main_color_gray</item>
+        <item name="android:textSize">@dimen/txt_16sp</item>
     </style>
 </resources>

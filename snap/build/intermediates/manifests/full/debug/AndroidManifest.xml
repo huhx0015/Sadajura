@@ -136,6 +136,30 @@
             android:parentActivityName="com.whomentors.sadajura.activities.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.whomentors.sadajura.chat.Login"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.whomentors.sadajura.chat.Register"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.whomentors.sadajura.chat.UserList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.whomentors.sadajura.chat.Chat"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
 
         <service android:name="com.parse.PushService" />
 
