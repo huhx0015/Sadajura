@@ -31,6 +31,7 @@ import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -51,8 +52,7 @@ import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.whomentors.sarajura.R;
 
-public class MainActivity extends FragmentActivity implements
-		ActionBar.TabListener {
+public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 	
 	public static final String TAG = MainActivity.class.getSimpleName();
 	
@@ -108,7 +108,9 @@ public class MainActivity extends FragmentActivity implements
 			ParseInstallation.getCurrentInstallation().saveInBackground();
 			
 			String appName = MainActivity.this.getString(R.string.app_name);
-			actionBar.setTitle(appName); 
+			actionBar.setTitle(appName);
+            actionBar.setDisplayShowHomeEnabled(false); // Disables the home icon.
+            actionBar.setDisplayUseLogoEnabled(false); // Disables the display of the logo.
 			
 			ParseAnalytics.trackAppOpened(getIntent());
 		}

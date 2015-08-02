@@ -4,5 +4,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:overScrollMode="never"
-    tools:context=".MainActivity" />
-<!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/layout/activity_main.xml -->
+    tools:context=".MainActivity" /><!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/layout/activity_main.xml -->

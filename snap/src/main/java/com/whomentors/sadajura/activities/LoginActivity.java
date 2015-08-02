@@ -1,10 +1,12 @@
 package com.whomentors.sadajura.activities;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -18,7 +20,7 @@ import com.parse.ParseInstallation;
 import com.parse.ParseUser;
 import com.whomentors.sarajura.R;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends AppCompatActivity {
 
 	protected EditText mUsername;
 	protected EditText mPassword;
@@ -31,6 +33,8 @@ public class LoginActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.activity_login);
+
+		setUpActionBar(); // Sets up the action bar.
 
 		mSignUpBtn = (Button)findViewById(R.id.signupbtn);
 		mSignUpBtn.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +75,7 @@ public class LoginActivity extends Activity {
                         positiveBtn.setBackground(getResources().getDrawable(R.drawable.list_item_selector));
 
                 }
+
 				else {
 					// Login
 					setProgressBarIndeterminateVisibility(true);
@@ -91,6 +96,7 @@ public class LoginActivity extends Activity {
 								intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 								startActivity(intent);
 							}
+
 							else {
 
                                 QustomDialogBuilder qustomDialogBuilder = new QustomDialogBuilder(LoginActivity.this);
@@ -122,5 +128,14 @@ public class LoginActivity extends Activity {
 				startActivity(intent);
 			}
 		});
+	}
+
+	// setUpActionBar(): Sets up the action bar attributes.
+	private void setUpActionBar() {
+
+		// Set up the action bar.
+		final ActionBar actionBar = getActionBar();
+		actionBar.setDisplayShowHomeEnabled(false); // Disables the home icon.
+		actionBar.setDisplayUseLogoEnabled(false); // Disables the display of the logo.
 	}
 }

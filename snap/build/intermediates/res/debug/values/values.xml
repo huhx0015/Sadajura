@@ -112,6 +112,13 @@
     <color name="primary_text_disabled_material_light">#39000000</color>
     <color name="ripple_material_dark">#4dffffff</color>
     <color name="ripple_material_light">#1f000000</color>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="sadajura_toolbar_accent_color">#D81B60</color>
+    <color name="sadajura_toolbar_dark_color">#EC407A</color>
+    <color name="sadajura_toolbar_light_color">#E91E63</color>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
@@ -460,14 +467,16 @@
     <string name="video_size_warning">To capture the full 10 seconds of video allowed. Set the video quality to the lowest setting.</string>
     <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/styles_customactionbar.xml -->
     <eat-comment/>
-    <style name="ActionBar.Solid.Customactionbar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
-        <item name="android:background">@drawable/ab_solid_customactionbar</item>
+    <style name="ActionBar.Solid.Customactionbar" parent="@android:style/Widget.Holo.ActionBar.Solid">
+        <item name="android:titleTextStyle">@style/TitleBarTextColor</item>
+        <item name="titleTextStyle">@style/TitleBarTextColor</item>
+        <item name="android:background">@color/sadajura_toolbar_light_color</item>
         <item name="android:backgroundStacked">@drawable/ab_stacked_solid_customactionbar</item>
-        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_customactionbar</item>
+        <item name="android:backgroundSplit">@color/sadajura_toolbar_accent_color</item>
         <item name="android:progressBarStyle">@style/ProgressBar.Customactionbar</item>
     </style>
     <style name="ActionBar.Transparent.Customactionbar" parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:background">@drawable/ab_transparent_customactionbar</item>
+        <item name="android:background">@color/sadajura_toolbar_accent_color</item>
         <item name="android:progressBarStyle">@style/ProgressBar.Customactionbar</item>
     </style>
     <style name="ActionBarTabStyle.Customactionbar" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
@@ -484,10 +493,13 @@
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
     <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/styles.xml -->
     <eat-comment/>
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-    </style>
-    <style name="AppTheme" parent="AppBaseTheme">
+    <style name="AppTheme" parent="AppTheme.Base"/>
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
         <item name="android:homeAsUpIndicator">@drawable/back_arrow</item>
+        <item name="colorPrimary">@color/sadajura_toolbar_light_color</item>
+        <item name="colorPrimaryDark">@color/sadajura_toolbar_dark_color</item>
+        <item name="colorAccent">@color/sadajura_toolbar_accent_color</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
     <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
@@ -1596,6 +1608,19 @@
     <style name="RtlOverlay.Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation">
         <item name="android:paddingLeft">@dimen/abc_action_bar_navigation_padding_start_material</item>
     </style>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/sadajura_toolbar_light_color</item>
+        <item name="colorControlNormal">@color/sadajura_toolbar_light_color</item>
+        <item name="colorPrimary">@color/sadajura_toolbar_light_color</item>
+        <item name="colorPrimaryDark">@color/sadajura_toolbar_dark_color</item>
+        <item name="android:textColor">@color/sadajura_toolbar_light_color</item>
+        <item name="android:textColorSecondary">@color/sadajura_toolbar_dark_color</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
+    <eat-comment/>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>
     <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1"/>
     <style name="TextAppearance.AppCompat.Body2" parent="Base.TextAppearance.AppCompat.Body2"/>
@@ -1736,6 +1761,13 @@
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/src/main/res/values/styles_customactionbar.xml -->
+    <eat-comment/>
+    <style name="TitleBarTextColor" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <!-- From: file:/C:/Users/Michael%20Yoon%20Huh/Development/Android/Sadajura/snap/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
+    <eat-comment/>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
     <style name="Widget.AppCompat.ActionBar.Solid" parent="Base.Widget.AppCompat.ActionBar.Solid">

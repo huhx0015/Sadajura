@@ -11,4 +11,8 @@
     <color name="main_color_gray_lt">#acacac</color>
     <color name="main_color_gray">#7d7d7d</color>
     <color name="gray_light">#e8e8e8</color>
+
+    <color name="sadajura_toolbar_dark_color">#EC407A</color>
+    <color name="sadajura_toolbar_light_color">#E91E63</color>
+    <color name="sadajura_toolbar_accent_color">#D81B60</color>
 </resources>

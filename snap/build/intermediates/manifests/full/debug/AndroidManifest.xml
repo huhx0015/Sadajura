@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.whomentors.sadajura"
-    android:versionCode="3"
+    android:installLocation="auto"
+    android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
@@ -31,13 +32,16 @@
     <application
         android:name="com.whomentors.sadajura.application.MainApplicationStartup"
         android:allowBackup="true"
+        android:alwaysRetainTaskState="true"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
+        android:launchMode="singleTop"
         android:theme="@style/Theme.Customactionbar" >
         <activity
             android:name="com.whomentors.sadajura.activities.MainActivity"
             android:label="@string/app_name"
-            android:logo="@drawable/ic_action"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,59 +52,50 @@
         <activity
             android:name="com.whomentors.sadajura.activities.LoginActivity"
             android:label="@string/title_activity_login"
-            android:logo="@drawable/ic_action"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.whomentors.sadajura.activities.PasswordResetActivity"
             android:label="@string/title_activity_password_reset"
-            android:logo="@drawable/ic_action"
             android:parentActivityName="com.whomentors.sadajura.activities.LoginActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.whomentors.sadajura.activities.SignUpActivity"
             android:label="@string/title_activity_sign_up"
-            android:logo="@drawable/ic_action"
             android:parentActivityName="com.whomentors.sadajura.activities.LoginActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.whomentors.sadajura.activities.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:logo="@drawable/ic_action"
             android:parentActivityName="com.whomentors.sadajura.activities.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.whomentors.sadajura.activities.EditUsernameActivity"
             android:label="@string/title_activity_edit_username"
-            android:logo="@drawable/ic_action"
             android:parentActivityName="com.whomentors.sadajura.activities.SettingsActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.whomentors.sadajura.activities.EditEmailActivity"
             android:label="@string/title_activity_edit_email"
-            android:logo="@drawable/ic_action"
             android:parentActivityName="com.whomentors.sadajura.activities.SettingsActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.whomentors.sadajura.activities.ProfileViewActivity"
-            android:logo="@drawable/ic_action"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.whomentors.sadajura.activities.WebViewActivity"
-            android:logo="@drawable/ic_action"
             android:parentActivityName="com.whomentors.sadajura.activities.SettingsActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.whomentors.sadajura.activities.EditFriendsActivity"
             android:label="@string/title_activity_edit_friends"
-            android:logo="@drawable/ic_action"
             android:parentActivityName="com.whomentors.sadajura.activities.MainActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -117,7 +112,6 @@
         <activity
             android:name="com.whomentors.sadajura.activities.RecipientsActivity"
             android:label="@string/title_activity_recipients"
-            android:logo="@drawable/ic_action"
             android:parentActivityName="com.whomentors.sadajura.activities.MainActivity"
             android:screenOrientation="portrait" >
         </activity>

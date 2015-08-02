@@ -1,12 +1,25 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="AppTheme" parent="AppTheme.Base"/>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:homeAsUpIndicator">@drawable/back_arrow</item>
+        <item name="colorPrimary">@color/sadajura_toolbar_light_color</item>
+        <item name="colorPrimaryDark">@color/sadajura_toolbar_dark_color</item>
+        <item name="colorAccent">@color/sadajura_toolbar_accent_color</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme" parent="AppBaseTheme">
-        <item name="android:homeAsUpIndicator">@drawable/back_arrow</item>
+    <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/sadajura_toolbar_light_color</item>
+        <item name="colorControlNormal">@color/sadajura_toolbar_light_color</item>
+        <item name="colorPrimary">@color/sadajura_toolbar_light_color</item>
+        <item name="colorPrimaryDark">@color/sadajura_toolbar_dark_color</item>
+        <item name="android:textColor">@color/sadajura_toolbar_light_color</item>
+        <item name="android:textColorSecondary">@color/sadajura_toolbar_dark_color</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
-    
      
      <style name="editext_graybg" parent="android:Widget.EditText">
           <item name="android:background">@drawable/editext_bg_gray</item>
