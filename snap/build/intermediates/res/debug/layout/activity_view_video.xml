@@ -6,7 +6,7 @@
     android:background="@android:color/black"
     tools:context=".ViewVideoActivity" >
 
-    <com.whomentors.sadajura.ui.TextureVideoView
+    <com.whomentors.sadajura.ui.view.TextureVideoView
         android:id="@+id/videoView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

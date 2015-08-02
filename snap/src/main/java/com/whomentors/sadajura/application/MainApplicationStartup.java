@@ -2,7 +2,7 @@ package com.whomentors.sadajura.application;
 
 import android.app.Application;
 
-import com.whomentors.sadajura.activities.CJMainActivity;
+import com.whomentors.sadajura.activities.SJMainActivity;
 import com.parse.Parse;
 import com.parse.PushService;
 
@@ -16,6 +16,6 @@ public class MainApplicationStartup extends Application {
 		super.onCreate();
 	    Parse.initialize(this, PARSE_ID, PARSE_KEY);
 	    
-	    PushService.setDefaultPushCallback(this, CJMainActivity.class);
+	    PushService.setDefaultPushCallback(this, SJMainActivity.class);
 	}
 }

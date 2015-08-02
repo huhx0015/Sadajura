@@ -17,7 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.whomentors.sadajura.ui.MessageAdapter;
+import com.whomentors.sadajura.ui.adapters.MessageAdapter;
 import com.whomentors.sadajura.data.ParseConstants;
 import com.whomentors.sadajura.activities.ViewImageActivity;
 import com.whomentors.sadajura.activities.ViewVideoActivity;

@@ -31,7 +31,7 @@ import android.widget.Toast;
 
 import com.whomentors.sadajura.data.FileHelper;
 import com.whomentors.sadajura.data.ParseConstants;
-import com.whomentors.sadajura.ui.CJDialogBuilder;
+import com.whomentors.sadajura.ui.dialog.SJDialogBuilder;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -241,15 +241,15 @@ public class RecipientsActivity extends ListActivity {
             case R.id.action_send:
 
                 if (getRecipientIds().size() == 0) {
-                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(RecipientsActivity.this);
-                    CJDialogBuilder.setMessage("Please tap on a friend to select them as a recipient and try sending again.")
+                    SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(RecipientsActivity.this);
+                    SJDialogBuilder.setMessage("Please tap on a friend to select them as a recipient and try sending again.")
                             .setIcon(R.drawable.ic_sad_face)
                             .setTitle("Oops!")
                             .setTitleColor("#000000")
                             .setDividerColor("#10f8b7")
                             .setPositiveButton(android.R.string.ok, null);
 
-                    AlertDialog customDialog = CJDialogBuilder.create();
+                    AlertDialog customDialog = SJDialogBuilder.create();
                     customDialog.show();
 
                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
@@ -259,7 +259,7 @@ public class RecipientsActivity extends ListActivity {
                 } else {
                     if (mFileTime == null) {
                         if (mFileType.equals(ParseConstants.TYPE_IMAGE)) {
-                            final CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(RecipientsActivity.this);
+                            final SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(RecipientsActivity.this);
 
                             ListView cameraOptions = new ListView(RecipientsActivity.this);
                             cameraOptions.setBackgroundColor(Color.WHITE);
@@ -270,9 +270,9 @@ public class RecipientsActivity extends ListActivity {
 
                             cameraOptions.setAdapter(modeAdapter);
 
-                            CJDialogBuilder.setView(cameraOptions);
+                            SJDialogBuilder.setView(cameraOptions);
 
-                            final AlertDialog customDialog = CJDialogBuilder.create();
+                            final AlertDialog customDialog = SJDialogBuilder.create();
                             customDialog.setCanceledOnTouchOutside(true);
                             customDialog.show();
 
@@ -339,7 +339,7 @@ public class RecipientsActivity extends ListActivity {
                                 }
                             });
                         } else {
-                            final CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(RecipientsActivity.this);
+                            final SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(RecipientsActivity.this);
 
                             ListView cameraOptions = new ListView(RecipientsActivity.this);
                             cameraOptions.setBackgroundColor(Color.WHITE);
@@ -350,9 +350,9 @@ public class RecipientsActivity extends ListActivity {
 
                             cameraOptions.setAdapter(modeAdapter);
 
-                            CJDialogBuilder.setView(cameraOptions);
+                            SJDialogBuilder.setView(cameraOptions);
 
-                            final AlertDialog customDialog = CJDialogBuilder.create();
+                            final AlertDialog customDialog = SJDialogBuilder.create();
                             customDialog.setCanceledOnTouchOutside(true);
                             customDialog.show();
 
@@ -514,14 +514,14 @@ public class RecipientsActivity extends ListActivity {
 				}
 				else {
 
-                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(RecipientsActivity.this);
-                    CJDialogBuilder.setMessage(R.string.error_sending_message)
+                    SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(RecipientsActivity.this);
+                    SJDialogBuilder.setMessage(R.string.error_sending_message)
                             .setTitle(getResources().getString(R.string.signup_error_title))
                             .setTitleColor("#000000")
                             .setDividerColor("#10f8b7")
                             .setPositiveButton(android.R.string.ok, null);
 
-                    AlertDialog customDialog = CJDialogBuilder.create();
+                    AlertDialog customDialog = SJDialogBuilder.create();
                     customDialog.show();
 
                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);

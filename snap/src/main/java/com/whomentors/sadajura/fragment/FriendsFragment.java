@@ -16,8 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.whomentors.sadajura.chat.SJChat;
-import com.whomentors.sadajura.ui.FriendsAdapter;
+import com.whomentors.sadajura.activities.SJChatActivity;
+import com.whomentors.sadajura.ui.adapters.FriendsAdapter;
 import com.whomentors.sadajura.data.ParseConstants;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -129,7 +129,7 @@ public class FriendsFragment extends ListFragment {
 
 		//Intent intent = new Intent(getActivity(), ProfileViewActivity.class);
 		//Intent intent = new Intent(getActivity(), MessageViewActivity.class); // Loads the message view.
-		Intent intent = new Intent(getActivity(), SJChat.class); // Loads the chat view.
+		Intent intent = new Intent(getActivity(), SJChatActivity.class); // Loads the chat view.
 		intent.putExtra("selectedUserObjectId", friendPosition.getObjectId());
 		intent.putExtra("selectedUsername", friendPosition.getUsername());
 		startActivity(intent);

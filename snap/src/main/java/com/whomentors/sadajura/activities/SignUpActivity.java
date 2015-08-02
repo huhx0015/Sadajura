@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.whomentors.sadajura.ui.CJDialogBuilder;
+import com.whomentors.sadajura.ui.dialog.SJDialogBuilder;
 import com.parse.ParseException;
 import com.parse.ParseInstallation;
 import com.parse.ParseUser;
@@ -37,15 +37,15 @@ public class SignUpActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.activity_sign_up);
 
-		mUsername = (EditText)findViewById(R.id.cj_username_field);
-		mPassword = (EditText)findViewById(R.id.cj_password_field);
-		mEmail = (EditText)findViewById(R.id.emailField);
+		mUsername = (EditText)findViewById(R.id.sj_username_field);
+		mPassword = (EditText)findViewById(R.id.sj_password_field);
+		mEmail = (EditText)findViewById(R.id.sj_email_field);
 		
 		mTermsPrivacyTextView = (TextView)findViewById(R.id.termsPrivacyTextView);
 		mTermsPrivacyTextView.setMovementMethod(LinkMovementMethod.getInstance());
 		mTermsPrivacyTextView.setText(Html.fromHtml(getResources().getString(R.string.terms_privacy)));
 		
-		mSignUpBtn = (Button)findViewById(R.id.cj_signup_btn);
+		mSignUpBtn = (Button)findViewById(R.id.sj_signup_btn);
 		mSignUpBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -63,15 +63,15 @@ public class SignUpActivity extends Activity {
 				
 				if (username.isEmpty() || password.isEmpty() || email.isEmpty()) {
 
-                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(SignUpActivity.this);
-                    CJDialogBuilder.setMessage(R.string.signup_error_message)
+                    SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(SignUpActivity.this);
+                    SJDialogBuilder.setMessage(R.string.signup_error_message)
                             .setIcon(R.drawable.ic_sad_face)
                             .setTitle(getResources().getString(R.string.signup_error_title))
                             .setTitleColor("#000000")
                             .setDividerColor("#10f8b7")
                             .setPositiveButton(android.R.string.ok, null);
 
-                    AlertDialog customDialog = CJDialogBuilder.create();
+                    AlertDialog customDialog = SJDialogBuilder.create();
                     customDialog.show();
 
                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
@@ -81,15 +81,15 @@ public class SignUpActivity extends Activity {
                 }
 				else if (username.startsWith("1") || username.startsWith("2") || username.startsWith("3") || username.startsWith("4") || username.startsWith("5") || username.startsWith("6") || username.startsWith("7") || username.startsWith("8") || username.startsWith("9") || username.startsWith("0"))
 			    {
-                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(SignUpActivity.this);
-                    CJDialogBuilder.setMessage("The username must not start with a number! Please try again by entering a username starting with a letter.")
+                    SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(SignUpActivity.this);
+                    SJDialogBuilder.setMessage("The username must not start with a number! Please try again by entering a username starting with a letter.")
                             .setIcon(R.drawable.ic_sad_face)
                             .setTitle(getResources().getString(R.string.signup_error_title))
                             .setTitleColor("#000000")
                             .setDividerColor("#10f8b7")
                             .setPositiveButton(android.R.string.ok, null);
 
-                    AlertDialog customDialog = CJDialogBuilder.create();
+                    AlertDialog customDialog = SJDialogBuilder.create();
                     customDialog.show();
 
                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
@@ -98,15 +98,15 @@ public class SignUpActivity extends Activity {
                 }
 				else if (found)
 				{
-                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(SignUpActivity.this);
-                    CJDialogBuilder.setMessage("The username must not contain any spaces! Please try again by entering a username without spaces.")
+                    SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(SignUpActivity.this);
+                    SJDialogBuilder.setMessage("The username must not contain any spaces! Please try again by entering a username without spaces.")
                             .setIcon(R.drawable.ic_sad_face)
                             .setTitle(getResources().getString(R.string.signup_error_title))
                             .setTitleColor("#000000")
                             .setDividerColor("#10f8b7")
                             .setPositiveButton(android.R.string.ok, null);
 
-                    AlertDialog customDialog = CJDialogBuilder.create();
+                    AlertDialog customDialog = SJDialogBuilder.create();
                     customDialog.show();
 
                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
@@ -132,22 +132,22 @@ public class SignUpActivity extends Activity {
 								ParseInstallation.getCurrentInstallation().addUnique("channels", "user_" + newUser.getObjectId());
 								ParseInstallation.getCurrentInstallation().saveInBackground();
 								
-								Intent intent = new Intent(SignUpActivity.this, CJMainActivity.class);
+								Intent intent = new Intent(SignUpActivity.this, SJMainActivity.class);
 								intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 								intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 								startActivity(intent);
 							}
 							else {
 
-                                CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(SignUpActivity.this);
-                                CJDialogBuilder.setMessage(e.getMessage())
+                                SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(SignUpActivity.this);
+                                SJDialogBuilder.setMessage(e.getMessage())
                                         .setIcon(R.drawable.ic_sad_face)
                                         .setTitle(getResources().getString(R.string.signup_error_title))
                                         .setTitleColor("#000000")
                                         .setDividerColor("#10f8b7")
                                         .setPositiveButton(android.R.string.ok, null);
 
-                                AlertDialog customDialog = CJDialogBuilder.create();
+                                AlertDialog customDialog = SJDialogBuilder.create();
                                 customDialog.show();
 
                                 Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);

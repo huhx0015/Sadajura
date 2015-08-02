@@ -12,8 +12,8 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.whomentors.sadajura.ui.TextureVideoView;
-import com.whomentors.sadajura.ui.TextureVideoView.MediaPlayerListener;
+import com.whomentors.sadajura.ui.view.TextureVideoView;
+import com.whomentors.sadajura.ui.view.TextureVideoView.MediaPlayerListener;
 import com.whomentors.sarajura.R;
 
 public class ViewVideoActivity extends Activity {

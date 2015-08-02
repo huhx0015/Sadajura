@@ -26,7 +26,7 @@ import android.widget.Toast;
 
 import com.whomentors.sadajura.ui.graphics.GraphicsUtil;
 import com.whomentors.sadajura.data.ParseConstants;
-import com.whomentors.sadajura.ui.CJDialogBuilder;
+import com.whomentors.sadajura.ui.dialog.SJDialogBuilder;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -82,7 +82,7 @@ public class SettingsActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                final CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(SettingsActivity.this);
+                final SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(SettingsActivity.this);
 
                 ListView cameraOptions = new ListView(SettingsActivity.this);
                 cameraOptions.setBackgroundColor(Color.WHITE);
@@ -92,9 +92,9 @@ public class SettingsActivity extends Activity {
                         android.R.id.text1, getResources().getStringArray(R.array.camera_choices2));
 
                 cameraOptions.setAdapter(modeAdapter);
-                CJDialogBuilder.setView(cameraOptions);
+                SJDialogBuilder.setView(cameraOptions);
 
-                final AlertDialog customDialog = CJDialogBuilder.create();
+                final AlertDialog customDialog = SJDialogBuilder.create();
                 customDialog.setCanceledOnTouchOutside(true);
                 customDialog.show();
 
@@ -160,8 +160,8 @@ public class SettingsActivity extends Activity {
                 {
                     String requestMessage = "This will delete all saved/non self destructing YourAppName messages. Don't worry we wont delete any self destructing YourAppName messages you have not viewed yet.";
 
-                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(SettingsActivity.this);
-                    CJDialogBuilder.setMessage(requestMessage)
+                    SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(SettingsActivity.this);
+                    SJDialogBuilder.setMessage(requestMessage)
                             .setIcon(R.drawable.ic_happy_face)
                             .setTitle("Clear My Messages?")
                             .setTitleColor("#000000")
@@ -219,7 +219,7 @@ public class SettingsActivity extends Activity {
                                 }
                             });
 
-                    AlertDialog customDialog = CJDialogBuilder.create();
+                    AlertDialog customDialog = SJDialogBuilder.create();
                     customDialog.show();
 
                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);

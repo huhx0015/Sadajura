@@ -23,8 +23,8 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.whomentors.sadajura.data.ParseConstants;
-import com.whomentors.sadajura.ui.CJDialogBuilder;
-import com.whomentors.sadajura.ui.RequestsAdapter;
+import com.whomentors.sadajura.ui.dialog.SJDialogBuilder;
+import com.whomentors.sadajura.ui.adapters.RequestsAdapter;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -147,8 +147,8 @@ public class RequestsFragment extends ListFragment {
 		
 		String requestMessage = "Add " + request.getString(ParseConstants.KEY_SENDER_NAME) + " as a confirmed friend to share YourAppName messages.";
 
-        CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(getListView().getContext());
-        CJDialogBuilder.setMessage(requestMessage)
+        SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(getListView().getContext());
+        SJDialogBuilder.setMessage(requestMessage)
             .setIcon(R.drawable.ic_profile)
 			.setTitle("Add Friend?")
             .setTitleColor("#000000")
@@ -195,8 +195,8 @@ public class RequestsFragment extends ListFragment {
                                     e1.printStackTrace();
                                 }
 
-                                CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(getListView().getContext());
-                                CJDialogBuilder.setMessage("You can now send and receive YourAppName messages with " + request.getString(ParseConstants.KEY_SENDER_NAME) + ".")
+                                SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(getListView().getContext());
+                                SJDialogBuilder.setMessage("You can now send and receive YourAppName messages with " + request.getString(ParseConstants.KEY_SENDER_NAME) + ".")
                                         .setIcon(R.drawable.ic_happy_face)
                                         .setTitle("Add Friend?")
                                         .setTitleColor("#000000")
@@ -218,7 +218,7 @@ public class RequestsFragment extends ListFragment {
                                             }
                                         });
 
-                                AlertDialog customDialog = CJDialogBuilder.create();
+                                AlertDialog customDialog = SJDialogBuilder.create();
                                 customDialog.show();
 
                                 Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
@@ -248,7 +248,7 @@ public class RequestsFragment extends ListFragment {
                 }
             });
 
-        AlertDialog customDialog = CJDialogBuilder.create();
+        AlertDialog customDialog = SJDialogBuilder.create();
         customDialog.show();
 
         Button negativeBtn = customDialog.getButton(DialogInterface.BUTTON_NEGATIVE);

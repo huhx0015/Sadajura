@@ -12,7 +12,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.whomentors.sadajura.ui.CJDialogBuilder;
+import com.whomentors.sadajura.ui.dialog.SJDialogBuilder;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
@@ -31,7 +31,7 @@ public class EditEmailActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.activity_edit_email);
 
-		mEmail = (EditText)findViewById(R.id.emailField);
+		mEmail = (EditText)findViewById(R.id.sj_email_field);
 		mSaveBtn = (Button)findViewById(R.id.savebtn);
 
         final ParseUser currentUser = ParseUser.getCurrentUser();
@@ -55,15 +55,15 @@ public class EditEmailActivity extends Activity {
 				
 			    if (email.isEmpty()) {
 
-                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(EditEmailActivity.this);
-                    CJDialogBuilder.setMessage(R.string.edit_email_error_message)
+                    SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(EditEmailActivity.this);
+                    SJDialogBuilder.setMessage(R.string.edit_email_error_message)
                             .setIcon(R.drawable.ic_sad_face)
                             .setTitle(getResources().getString(R.string.signup_error_title))
                             .setTitleColor("#000000")
                             .setDividerColor("#10f8b7")
                             .setPositiveButton(android.R.string.ok, null);
 
-                    AlertDialog customDialog = CJDialogBuilder.create();
+                    AlertDialog customDialog = SJDialogBuilder.create();
                     customDialog.show();
 
                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
@@ -103,15 +103,15 @@ public class EditEmailActivity extends Activity {
                                     Log.i(TAG, currentUser.getEmail());
 
 
-                                    CJDialogBuilder CJDialogBuilder = new CJDialogBuilder(EditEmailActivity.this);
-                                    CJDialogBuilder.setMessage(e.getMessage())
+                                    SJDialogBuilder SJDialogBuilder = new SJDialogBuilder(EditEmailActivity.this);
+                                    SJDialogBuilder.setMessage(e.getMessage())
                                             .setIcon(R.drawable.ic_sad_face)
                                             .setTitle(getResources().getString(R.string.signup_error_title))
                                             .setTitleColor("#000000")
                                             .setDividerColor("#10f8b7")
                                             .setPositiveButton(android.R.string.ok, null);
 
-                                    AlertDialog customDialog = CJDialogBuilder.create();
+                                    AlertDialog customDialog = SJDialogBuilder.create();
                                     customDialog.show();
 
                                     Button positiveBtn = customDialog.getButton(DialogInterface.BUTTON_POSITIVE);
