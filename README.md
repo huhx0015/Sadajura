@@ -12,5 +12,7 @@ With Sadajura, people could request duty-free items from friends and relatives w
 The Sadajura GitHub repositories for the iOS version and web payment backend are available here:
 
 Web: http://www.sadajura.co/
+
 Web Backend: https://github.com/SsureyMoon/sadajura_payment
+
 iOS Version: https://github.com/yshiga/sadajura-iOS
