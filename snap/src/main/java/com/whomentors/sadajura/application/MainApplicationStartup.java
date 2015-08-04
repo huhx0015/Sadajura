@@ -8,8 +8,8 @@ import com.parse.PushService;
 
 public class MainApplicationStartup extends Application {
 
-	private static final String PARSE_ID = "NNrnhbm9IvWTfoshaJ2kqNJWi3f6dw7dViDdj6xO";
-	private static final String PARSE_KEY = "maANGWA1B4xDX54uvZM8ll0ertuQ1eUYR8knIqy8";
+	private static final String PARSE_ID = "NaN";
+	private static final String PARSE_KEY = "NaN";
 
 	@Override
 	public void onCreate() { 

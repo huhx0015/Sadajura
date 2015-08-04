@@ -1,43 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/snap" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/java/com/whomentors/sadajura/activities/SJChatActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/java/com/whomentors/sadajura/chat/Chat.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/java/com/whomentors/sadajura/chat/ChattApp.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/java/com/whomentors/sadajura/chat/Login.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/java/com/whomentors/sadajura/chat/Register.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/java/com/whomentors/sadajura/chat/UserList.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/java/com/whomentors/sadajura/chat/custom" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/java/com/whomentors/sadajura/chat/model" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/java/com/whomentors/sadajura/chat/utils" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/actionbar_bg.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/arrow.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/back_arrow.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/chat_bubble_gray.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/chat_bubble_pink.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/editext_bg_gray.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/edittext_bg.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/green_btn.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/ic_compose.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/ic_offline.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/ic_online.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/ic_pwd.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/ic_send.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/ic_username.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/icon.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/logo_login.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/user_chat1.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/drawable-xhdpi/user_chat2.png" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/chat_item.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/chat_item_rcv.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/chat_item_sent.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/login.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/register.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/sj_chat_activity.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/layout/user_list.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/values/color.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/snap/src/main/res/values/styles.xml" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
