@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\menu\\edit_friends.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\menu\\edit_friends.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\menu\\recipients.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\menu\\recipients.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\menu\\friends_profile.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\menu\\friends_profile.xml"
+    }
+]

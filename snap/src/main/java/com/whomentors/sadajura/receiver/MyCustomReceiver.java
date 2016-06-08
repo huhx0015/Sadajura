@@ -25,8 +25,6 @@ public class MyCustomReceiver extends BroadcastReceiver {
   @Override
   public void onReceive(Context context, Intent intent) {
 
-    //startSpeech("SA-RA JU-RA ALERT!", context); // Starts TTS speech.
-
     try {
 
       String action = intent.getAction();

@@ -1,0 +1,322 @@
+[
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\activity_edit_friends.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\activity_edit_friends.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_requests.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\fragment_requests.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\activity_edit_email.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\activity_edit_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_inbox.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\fragment_inbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\layout_tab_text.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\layout_tab_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\wish_list_card.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\wish_list_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\sj_location_textview.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\sj_location_textview.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\notification_template_lines.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\sj_flight_activity.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\sj_flight_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\sj_login_activity.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\sj_login_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_wishlist.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\fragment_wishlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\sj_location_spinner.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\sj_location_spinner.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\layout_snackbar.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\layout_snackbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\load_more.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\load_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\message_item.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\message_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\activity_recipients.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\activity_recipients.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\activity_sign_up.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\chat_item_sent.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\chat_item_sent.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\qustom_dialog_layout.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\qustom_dialog_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\sj_password_reset_activity.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\sj_password_reset_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\sj_main_activity.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\sj_main_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\activity_edit_username.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\activity_edit_username.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_simple_dropdown_hint.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_simple_dropdown_hint.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\activity_webview.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\activity_webview.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\edit_friends_item.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\edit_friends_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\chat_item.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\chat_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\activity_view_video.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\activity_view_video.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\activity_settings.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\activity_view_image.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\activity_view_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\friends_profile_item.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\friends_profile_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\layout_snackbar_include.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\layout_snackbar_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\recipients_item.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\recipients_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_friends.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\fragment_friends.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\sj_voice_activity.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\sj_voice_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\layout_tab_icon.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\layout_tab_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\chat_item_rcv.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\chat_item_rcv.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\requests_item.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\requests_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\activity_profile_view.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\activity_profile_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\sj_chat_activity.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\sj_chat_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\design_navigation_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\layout\\friends_item.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\layout\\friends_item.xml"
+    }
+]

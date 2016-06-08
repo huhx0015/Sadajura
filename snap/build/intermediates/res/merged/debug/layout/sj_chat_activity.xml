@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sj_chat_activity_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/sj_toolbar_drop_shadow"
+        android:id="@+id/sj_chat_container_drop_shadow" />
+
+    <ListView
+        android:id="@+id/sj_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/white"
+        android:dividerHeight="@dimen/pad_5dp"
+        android:fastScrollEnabled="true"
+        android:paddingBottom="@dimen/pad_10dp"
+        android:paddingTop="@dimen/pad_10dp"
+        tools:listitem="@layout/chat_item_rcv" >
+    </ListView>
+
+   <LinearLayout
+       android:id="@+id/sj_chat_bottom_container"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/gray_light"
+       android:gravity="center_vertical"
+       android:padding="@dimen/pad_5dp"
+       tools:context=".SJMainActivity" >
+
+       <EditText
+           android:id="@+id/sj_chat_edit_text"
+           style="@style/edittext_msg"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:hint="@string/type_msg" />
+
+       <ImageButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/sj_chat_camera_button"
+           android:src="@android:drawable/ic_menu_camera"
+           android:background="@android:color/transparent" />
+
+       <Button
+            android:id="@+id/sj_chat_send_button"
+            style="@style/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/ic_menu_send" />
+
+    </LinearLayout>
+
+</LinearLayout>

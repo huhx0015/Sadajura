@@ -154,7 +154,6 @@ public class SJLoginActivity extends Activity {
 					if (positiveBtn != null) {
 						positiveBtn.setBackground(getResources().getDrawable(R.drawable.list_item_selector));
 					}
-
 				}
 
 				// Begins the login process.

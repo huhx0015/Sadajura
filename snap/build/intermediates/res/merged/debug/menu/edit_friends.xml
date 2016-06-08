@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/search"
+          android:orderInCategory="101"
+          android:showAsAction="always"
+          android:title="@string/menu_search_label"
+          android:actionViewClass="android.widget.SearchView" />
+</menu>

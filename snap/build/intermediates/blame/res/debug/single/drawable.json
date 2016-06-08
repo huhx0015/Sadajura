@@ -1,0 +1,150 @@
+[
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\sj_rounded_dark_pink_button.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\sj_rounded_dark_pink_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_cab_done_customactionbar.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\btn_cab_done_customactionbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\selectable_background_customactionbar.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\selectable_background_customactionbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\list_item_pressed.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\list_item_pressed.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\signupbtn.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\signupbtn.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\sadajura_alert.png",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\sadajura_alert.png"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\snackbar_background.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\drawable\\snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\spinner_background_ab_customactionbar.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\spinner_background_ab_customactionbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\loginbtn.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\loginbtn.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\fab_background.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\drawable\\fab_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\sj_rounded_light_pink_button.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\sj_rounded_light_pink_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\list_item_selector.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\list_item_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\sj_toolbar_drop_shadow.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\sj_toolbar_drop_shadow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\list_item_normal.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\list_item_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_indicator_ab_customactionbar.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\tab_indicator_ab_customactionbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\build\\intermediates\\res\\merged\\debug\\drawable\\progress_horizontal_customactionbar.xml",
+        "source": "C:\\Users\\Michael Yoon Huh\\Development\\Android\\Projects\\Sadajura\\snap\\src\\main\\res\\drawable\\progress_horizontal_customactionbar.xml"
+    }
+]
