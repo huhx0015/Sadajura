@@ -1,5 +1,5 @@
 Sadajura | Capital One 2015 SmallBizDev Hackathon San Francisco
-============
+===============================================================
 
 Team: Rauhmel Fox, Ibrahim Kabil, Michael Huh, Ssurey Moon, Jeeeun Lee, Kibo Sim, Yuichi Shiga, Heaweon Lee, Missy Bur
 
